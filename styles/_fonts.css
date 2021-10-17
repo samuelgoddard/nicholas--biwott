@@ -6,3 +6,66 @@
   font-style: normal;
   font-display: swap;
 } */
+
+
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: local('HelveticaNowDisplay-Medium'),
+      url('../public/fonts/HelveticaNowDisplay-Medium.woff2') format('woff2'),
+      url('../public/fonts/HelveticaNowDisplay-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Schnyder S';
+  src: local('Schnyder S Light'), local('SchnyderS-Light'),
+      url('../public/fonts/SchnyderS-Light.woff2') format('woff2'),
+      url('../public/fonts/SchnyderS-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: local('HelveticaNowDisplay-RegIta'),
+      url('../public/fonts/HelveticaNowDisplay-RegIta.woff2') format('woff2'),
+      url('../public/fonts/HelveticaNowDisplay-RegIta.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: local('HelveticaNowDisplay-Regular'),
+      url('../public/fonts/HelveticaNowDisplay-Regular.woff2') format('woff2'),
+      url('../public/fonts/HelveticaNowDisplay-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Schnyder S';
+  src: local('Schnyder S Demi'), local('SchnyderS-Demi'),
+      url('../public/fonts/SchnyderS-Demi.woff2') format('woff2'),
+      url('../public/fonts/SchnyderS-Demi.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Schnyder S';
+  src: local('Schnyder S Bold'), local('SchnyderS-Bold'),
+      url('../public/fonts/SchnyderS-Bold.woff2') format('woff2'),
+      url('../public/fonts/SchnyderS-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
