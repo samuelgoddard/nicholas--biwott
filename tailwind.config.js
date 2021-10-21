@@ -24,7 +24,8 @@ module.exports = {
         'green': '#006700',
         'red': '#C20000',
         'gold': '#8E7E62',
-        'navy': '#0C1F43'
+        'navy': '#0C1F43',
+        'grey': '#595959'
       }
     },
   },
