@@ -40,7 +40,7 @@ export default function BusinessMan() {
                     firstWord="Growth"
                     secondWord="Jobs"
                     thirdWord="Entrepreneurship"
-                    image="https://placedog.net/640/460"
+                    image="/images/businessman/1.jpg"
                     imageCaption="An Image Caption"
                     quote="Nicholas Biwott was a true giant in the business community…very rarely do we speak of a person who was not just a great public servant, a great politician, but also a great businessman. The man’s industry was truly legendary…it provided employment to thousands of Kenyans and also contributed immensely to the economy of this country."
                     quoteCaption="Kiprono Kittony"
@@ -57,7 +57,7 @@ export default function BusinessMan() {
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 relative content mb-8 md:mb-0 overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="https://placedog.net/640/640" alt="Placeholder" />
+                            <img className="w-full" src="/images/businessman/2.jpg" alt="Placeholder" />
                           </figure>
                         </div>
                         <div className="w-full md:w-1/2 content md:px-12 xl:px-16 max-w-2xl">
@@ -80,7 +80,7 @@ export default function BusinessMan() {
                       <div className="flex flex-wrap">
                       < div className="w-full md:w-7/12 relative content mb-8 md:mb-0">
                           <figure>
-                            <img className="w-full" src="https://placedog.net/640/400" alt="Placeholder" />
+                            <img className="w-full" src="/images/businessman/3.jpg" alt="Placeholder" />
                           </figure>
                         </div>
 
@@ -103,7 +103,7 @@ export default function BusinessMan() {
                       </div>
                       <div className="w-full md:w-5/12 relative content order-1 md:order-2 mb-6 md:mb-0">
                         <figure>
-                          <img className="w-full" src="https://placedog.net/420/600" alt="Placeholder" />
+                          <img className="w-full" src="/images/businessman/4.jpg" alt="Placeholder" />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -123,7 +123,7 @@ export default function BusinessMan() {
 
                         <div className="w-full md:w-7/12 relative content order-1 md:order-2">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="https://placedog.net/640/550" alt="Placeholder" />
+                            <img className="w-full" src="/images/businessman/5.jpg" alt="Placeholder" />
                           </figure>
                         </div>
                       </div>

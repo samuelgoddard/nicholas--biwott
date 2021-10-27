@@ -18,11 +18,11 @@ export default function PublicServant() {
     <Layout>
       <NextSeo title="Public Servant" />
       
-      <LocomotiveScrollProvider
+      {/* <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.05 }}
         containerRef={containerRef}
         watch={[]}
-      >
+      > */}
         <div data-scroll-container ref={containerRef} id="scroll-container">
           <div data-scroll-section>            
             <Header timeline />
@@ -40,7 +40,7 @@ export default function PublicServant() {
                     firstWord="Energy"
                     secondWord="Vision"
                     thirdWord="Kenya"
-                    image="https://placedog.net/640/460"
+                    image="/images/public-servant/1.jpg"
                     imageCaption="An Image Caption"
                     quote="Biwott played a central role in the formation of the modern Kenyan state at a critical moment in our history, when it was vital to have every hand on deck to ensure that Kenya’s first transfer of power went smoothly, and ensured national unity at a very tense and trying time."
                     quoteCaption="Raila Odinga"
@@ -69,7 +69,7 @@ export default function PublicServant() {
 
                         <div className="w-full md:w-1/2 relative content overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="https://placedog.net/640/480" alt="Placeholder" />
+                            <img className="w-full" src="/images/public-servant/2.jpg" alt="Placeholder" />
                             <figcaption>Image caption</figcaption>
                           </figure>
 
@@ -83,7 +83,7 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0">
                         <figure>
-                          <img className="w-full" src="https://placedog.net/420/570" alt="Placeholder" />
+                          <img className="w-full" src="/images/public-servant/3.jpg" alt="Placeholder" />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -109,7 +109,7 @@ export default function PublicServant() {
 
                         <div className="w-full md:w-1/2 relative content overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="https://placedog.net/640/480" alt="Placeholder" />
+                            <img className="w-full" src="/images/public-servant/4.jpg" alt="Placeholder" />
                             <figcaption>Image caption</figcaption>
                           </figure>
                         </div>
@@ -123,7 +123,7 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="seventies">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="https://placedog.net/640/500" alt="Placeholder" />
+                          <img className="w-full" src="/images/public-servant/4.jpg" alt="Placeholder" />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -151,7 +151,7 @@ export default function PublicServant() {
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 relative content overflow-hidden mb-8 md:mb-0">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="https://placedog.net/640/480" alt="Placeholder" />
+                            <img className="w-full" src="/images/public-servant/5.jpg" alt="Placeholder" />
                             <figcaption>Image caption</figcaption>
                           </figure>
                         </div>
@@ -178,7 +178,7 @@ export default function PublicServant() {
 
                         <div className="w-full md:w-5/12 relative content">
                           <figure className="mb-6 md:mb-8 xl:mb-10 w-full md:max-w-[450px] ml-auto">
-                            <img className="w-full" src="https://placedog.net/550/800" alt="Placeholder" />
+                            <img className="w-full" src="/images/public-servant/6.jpg" alt="Placeholder" />
                           </figure>
                         </div>
                       </div>
@@ -191,7 +191,7 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="eighties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="https://placedog.net/640/500" alt="Placeholder" />
+                          <img className="w-full" src="/images/public-servant/7.jpg" alt="Placeholder" />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -219,7 +219,7 @@ export default function PublicServant() {
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 relative content overflow-hidden mb-8 md:mb-0">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="https://placedog.net/640/480" alt="Placeholder" />
+                            <img className="w-full" src="/images/public-servant/8.jpg" alt="Placeholder" />
                             <figcaption>Image caption</figcaption>
                           </figure>
                         </div>
@@ -239,7 +239,7 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="nineties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="https://placedog.net/640/500" alt="Placeholder" />
+                          <img className="w-full" src="/images/public-servant/9.jpg" alt="Placeholder" />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -284,7 +284,7 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0">
                         <figure>
-                          <img className="w-full" src="https://placedog.net/480/620" alt="Placeholder" />
+                          <img className="w-full" src="/images/public-servant/10.jpg" alt="Placeholder" />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -314,7 +314,7 @@ export default function PublicServant() {
 
                         <div className="w-full md:w-1/2 content md:pl-12 xl:pl-16 max-w-2xl">
                           <figure>
-                            <img className="w-full" src="https://placedog.net/550/550" alt="Placeholder" />
+                            <img className="w-full" src="/images/public-servant/11.jpg" alt="Placeholder" />
                             <figcaption>Something</figcaption>
                           </figure>
                         </div>
@@ -359,7 +359,7 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="noughties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="https://placedog.net/640/500" alt="Placeholder" />
+                          <img className="w-full" src="/images/public-servant/12.jpg" alt="Placeholder" />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -404,7 +404,7 @@ export default function PublicServant() {
                     <section className="flex flex-wrap items-center mb-12 md:mb-24 xl:mb-32" id="noughties">
                       <div className="w-full md:w-1/2 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="https://placedog.net/640/640" alt="Placeholder" />
+                          <img className="w-full" src="/images/public-servant/13.jpg" alt="Placeholder" />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -432,7 +432,7 @@ export default function PublicServant() {
             </LazyMotion>
           </div>
         </div>
-      </LocomotiveScrollProvider>
+      {/* </LocomotiveScrollProvider> */}
     </Layout>
   )
 }

@@ -16,7 +16,7 @@ export default function Header({ timeline }) {
       scroll.on('scroll', ({ limit, scroll }) => {
         const progress = scroll.y / limit.y * 100
 
-        // console.log(progress)
+        console.log(progress)
         if (progress > 1) {
           setShowLogo(true)
           setShowTimeline(true)

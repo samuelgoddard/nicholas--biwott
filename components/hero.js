@@ -1,5 +1,7 @@
 import Container from "./container";
 import TimelineNav from "./timeline-nav";
+import { m } from 'framer-motion'
+import { reveal } from '@/helpers/transitions'
 
 export default function Hero({ metaText, firstWord, secondWord, thirdWord, image, imageCaption, quote, quoteCaption, quoteCite, timeline, reverse}) {
   return (
@@ -8,12 +10,29 @@ export default function Hero({ metaText, firstWord, secondWord, thirdWord, image
         <div className="w-full mb-6 md:mb-8 xl:mb-10">
           <Container>
             <div className="text-center max-w-[600px] md:max-w-[740px] xl:max-w-[900px] mx-auto">
-              <span className="block text-sm uppercase text-gold mb-5">{metaText}</span>
-              <h1 className="text-5xl md:text-6xl xl:text-7xl xl:leading-[1.09] font-normal">
-                <span className="inline-block text-black mr-1">{firstWord}.</span>
-                <span className="inline-block text-green mr-1">{secondWord}.</span>
-                <span className="inline-block text-red mr-1">{thirdWord}.</span>
-              </h1>
+              <span className="block overflow-hidden mb-5">
+                <m.span variants={reveal} className="block text-sm uppercase text-gold">{metaText}</m.span>
+              </span>
+
+              <m.h1 
+                initial="initial"
+                animate="enter"
+                exit="exit"
+                variants={{
+                  enter: { transition: { delayChildren: 0.5, staggerChildren: 0.5 } }
+                }}
+                className="text-5xl md:text-6xl xl:text-7xl 3xl:text-8xl leading-[1.2] md:leading-[1.1] xl:leading-[1.1] 3xl:leading-[1.12] font-normal"
+              >
+                <span className="inline-block overflow-hidden mx-1">
+                  <m.span variants={reveal} className="block text-black">{firstWord}.</m.span>
+                </span>
+                <span className="inline-block overflow-hidden mx-1">
+                  <m.span variants={reveal} className="block text-green">{secondWord}.</m.span>
+                </span>
+                <span className="inline-block overflow-hidden mx-1">
+                  <m.span variants={reveal} className="block text-red">{thirdWord}.</m.span>
+                </span>
+              </m.h1>
             </div>
           </Container>
         </div>

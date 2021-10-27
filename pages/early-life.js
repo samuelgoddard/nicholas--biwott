@@ -40,7 +40,7 @@ export default function EarlyLife() {
                     firstWord="Diligence"
                     secondWord="Aspiration"
                     thirdWord="Dedication"
-                    image="https://placedog.net/640/460"
+                    image="/images/early-life/1.jpg"
                     imageCaption="An Image Caption"
                     quote="I was sent to school at a young age at the insistence of my mother, who instilled in us the importance of discipline and education. I well remember my father carrying me on his back through swollen rivers to make sure I got to school! And he encouraged me to continue my education through to university."
                     quoteCaption="Nicholas Biwott"
@@ -55,7 +55,7 @@ export default function EarlyLife() {
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 relative content mb-8 md:mb-0 overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="https://placedog.net/640/450" alt="Placeholder" />
+                            <img className="w-full" src="/images/early-life/2.jpg" alt="Placeholder" />
                           </figure>
 
                           <div className="flex flex-wrap content content--small md:-mx-3">
@@ -88,7 +88,7 @@ export default function EarlyLife() {
 
                         <div className="w-full md:w-7/12 relative content order-1 md:order-2">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="https://placedog.net/640/400" alt="Placeholder" />
+                            <img className="w-full" src="/images/early-life/3.jpg" alt="Placeholder" />
                           </figure>
                         </div>
                       </div>
@@ -108,7 +108,7 @@ export default function EarlyLife() {
 
                         <div className="w-full md:w-5/12 relative content">
                           <figure className="mb-6 md:mb-8 xl:mb-10 w-full md:max-w-[450px] ml-auto">
-                            <img className="w-full" src="https://placedog.net/550/800" alt="Placeholder" />
+                            <img className="w-full" src="/images/early-life/4.jpg" alt="Placeholder" />
                           </figure>
                         </div>
                       </div>
