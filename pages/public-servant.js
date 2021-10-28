@@ -18,11 +18,11 @@ export default function PublicServant() {
     <Layout>
       <NextSeo title="Public Servant" />
       
-      {/* <LocomotiveScrollProvider
+      <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.05 }}
         containerRef={containerRef}
         watch={[]}
-      > */}
+      >
         <div data-scroll-container ref={containerRef} id="scroll-container">
           <div data-scroll-section>            
             <Header timeline />
@@ -432,7 +432,7 @@ export default function PublicServant() {
             </LazyMotion>
           </div>
         </div>
-      {/* </LocomotiveScrollProvider> */}
+      </LocomotiveScrollProvider>
     </Layout>
   )
 }
