@@ -9,6 +9,7 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import NavSection from '@/components/nav-section'
 import Header from '@/components/header'
+import Link from 'next/link'
 
 export default function Menu() {
   const containerRef = useRef(null)
@@ -42,10 +43,34 @@ export default function Menu() {
                     <div className="mt-auto w-full pb-12">
                       <Container>
                         <ul className="flex flex-wrap text-sm md:text-base justify-center">
-                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">Quote</li>
-                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">Press</li>
-                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">Sources</li>
-                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">Contact</li>
+                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
+                            <Link href="/quotes">
+                              <a className="block">
+                                Quote
+                              </a>
+                            </Link>
+                          </li>
+                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
+                            <Link href="/press">
+                              <a className="block">
+                                Press
+                              </a>
+                            </Link>
+                          </li>
+                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
+                            <Link href="/sources">
+                              <a className="block">
+                                Sources
+                              </a>
+                            </Link>
+                          </li>
+                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
+                            <Link href="/contact">
+                              <a className="block">
+                                Contact
+                              </a>
+                            </Link>
+                          </li>
                         </ul>
                       </Container>
                     </div>

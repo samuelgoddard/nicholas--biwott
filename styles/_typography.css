@@ -1,7 +1,7 @@
 /* Content Stylings */
 .content {
   & > p {
-    @apply mb-6 last-of-type:mb-0 text-lg xl:text-xl;
+    @apply mb-6 last-of-type:mb-0 text-lg xl:text-xl block;
   }
 
   & > p > a {
@@ -9,11 +9,15 @@
   }
 
   & > h1, & > .h1 {
-    @apply text-4xl md:text-5xl;
+    @apply text-4xl md:text-5xl text-navy;
   }
 
   & > h2, & > .h2 {
-    @apply text-4xl md:text-4xl xl:leading-[1.25];
+    @apply text-4xl md:text-4xl xl:leading-[1.25] text-navy;
+  }
+
+  & > h3, & > .h3 {
+    @apply text-3xl md:text-3xl xl:leading-[1.25] text-navy;
   }
 
   & figcaption {

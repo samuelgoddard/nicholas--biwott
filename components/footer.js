@@ -1,4 +1,5 @@
 import Logo from '@/components/logo'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -15,18 +16,90 @@ export default function Footer() {
           <div className="w-full">
             <nav className="">
               <ul className="flex flex-wrap text-sm md:text-base">
-                <li className="w-1/2 md:w-1/4 py-2">Home</li>
-                <li className="w-1/2 md:w-1/4 py-2">Public Servant</li>
-                <li className="w-1/2 md:w-1/4 py-2">Quotes</li>
-                <li className="w-1/2 md:w-1/4 py-2">Sources</li>
-                <li className="w-1/2 md:w-1/4 py-2">Early Life</li>
-                <li className="w-1/2 md:w-1/4 py-2">Philanthropist</li>
-                <li className="w-1/2 md:w-1/4 py-2">Press</li>
-                <li className="w-1/2 md:w-1/4 py-2">Privacy Policy</li>
-                <li className="w-1/2 md:w-1/4 py-2">Businessman</li>
-                <li className="w-1/2 md:w-1/4 py-2">Personal Life</li>
-                <li className="w-1/2 md:w-1/4 py-2">Contact</li>
-                <li className="w-1/2 md:w-1/4 py-2">Terms &amp; Conditions</li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/">
+                    <a className="block">
+                      Home
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/public-servant">
+                    <a className="block">
+                      Public Servant
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/quotes">
+                    <a className="block">
+                      Quotes
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/sources">
+                    <a className="block">
+                      Sources
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/early-life">
+                    <a className="block">
+                      Early Life
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/philanthropist">
+                    <a className="block">
+                      Philanthropist
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/press">
+                    <a className="block">
+                      Press
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/privacy">
+                    <a className="block">
+                      Privacy Policy
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/businessman">
+                    <a className="block">
+                      Businessman
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/personal-life">
+                    <a className="block">
+                      Personal Life
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/contact">
+                    <a className="block">
+                      Contact
+                    </a>
+                  </Link>
+                </li>
+                <li className="w-1/2 md:w-1/4 py-2">
+                  <Link href="/terms-and-conditions">
+                    <a className="block">
+                      Terms &amp; Conditions
+                    </a>
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>

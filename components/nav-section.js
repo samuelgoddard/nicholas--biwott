@@ -41,7 +41,7 @@ export default function NavSection({ backTextFirst, backTextSecond, metaText }) 
               </Link>
             </li>
             <li className="w-1/2 py-3 md:py-6 xl:py-8 relative pl-6 md:pl-10">
-              <Link href="/">
+              <Link href="/philanthropist">
                 <a className="block">
                   <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold opacity-75 rotate-45 block absolute top-0 left-0 mt-[24px] md:mt-[42px] xl:mt-[58px]"></span>
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl block text-navy mb-2 pm rmd:mb-3">Philanthropist</span>
@@ -50,7 +50,7 @@ export default function NavSection({ backTextFirst, backTextSecond, metaText }) 
               </Link>
             </li>
             <li className="w-1/2 py-3 md:py-6 xl:py-8 relative pl-6 md:pl-10">
-              <Link href="/">
+              <Link href="/personal-life">
                 <a className="block">
                   <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold opacity-75 rotate-45 block absolute top-0 left-0 mt-[24px] md:mt-[42px] xl:mt-[58px]"></span>
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl block text-navy mb-2 pm rmd:mb-3">Personal Life</span>
