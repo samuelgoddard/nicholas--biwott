@@ -12,6 +12,14 @@
     @apply text-4xl md:text-5xl text-navy;
   }
 
+  & * + h2 {
+    @apply mt-16;
+  }
+
+  & * + h3 {
+    @apply mt-12;
+  }
+
   & > h2, & > .h2 {
     @apply text-4xl md:text-4xl xl:leading-[1.25] text-navy;
   }
@@ -54,4 +62,8 @@
 /* Heading Defaults */
 h1, .h1, h2, .h2, h3, .h3 {
   @apply p-0 mb-6 font-display font-semibold;
+}
+
+.object-cover img {
+  @apply object-cover object-center w-full h-full;
 }

@@ -10,6 +10,7 @@ import { NextSeo } from 'next-seo'
 import NavSection from '@/components/nav-section'
 import Hero from '@/components/hero'
 import Header from '@/components/header'
+import ImageWrapper from '@/components/image-wrapper'
 
 export default function EarlyLife() {
   const containerRef = useRef(null)
@@ -55,7 +56,13 @@ export default function EarlyLife() {
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 relative content mb-8 md:mb-0 overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="/images/early-life/2.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/early-life/2.jpg"}
+                              width={900}
+                              height={600}
+                            />
                           </figure>
 
                           <div className="flex flex-wrap content content--small md:-mx-3">
@@ -88,7 +95,13 @@ export default function EarlyLife() {
 
                         <div className="w-full md:w-7/12 relative content order-1 md:order-2">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="/images/early-life/3.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/early-life/3.jpg"}
+                              width={900}
+                              height={580}
+                            />
                           </figure>
                         </div>
                       </div>
@@ -108,7 +121,13 @@ export default function EarlyLife() {
 
                         <div className="w-full md:w-5/12 relative content">
                           <figure className="mb-6 md:mb-8 xl:mb-10 w-full md:max-w-[450px] ml-auto">
-                            <img className="w-full" src="/images/early-life/4.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/early-life/4.jpg"}
+                              width={720}
+                              height={1060}
+                            />
                           </figure>
                         </div>
                       </div>

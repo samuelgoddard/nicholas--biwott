@@ -60,7 +60,7 @@ export default function Header({ timeline }) {
           </div>
         )}
 
-        <nav className="ml-auto flex space-x-3 text-[18px] md:text-[20px] xl:text-[22px] w-auto mt-[2px] md:mt-0">
+        <nav className="ml-auto flex space-x-3 text-[18px] md:text-[18px] xl:text-[18px] w-auto mt-[2px] md:mt-0">
           <Link href="/menu"><a className="block uppercase">Menu</a></Link>
         </nav>
       </div>

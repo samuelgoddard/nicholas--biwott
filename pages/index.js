@@ -9,6 +9,7 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import NavSection from '@/components/nav-section'
 import Header from '@/components/header'
+import ImageWrapper from '@/components/image-wrapper'
 
 export default function Home() {
   const containerRef = useRef(null)
@@ -75,7 +76,12 @@ export default function Home() {
 
                     <div className="w-full md:w-1/2 xl:w-7/12 ml-auto h-[50vh] md:h-full md:min-h-screen relative  order-1 md:order-2 mb-8 md:mb-0">
                       <div className="w-full h-full absolute inset-0 bg-grey">
-                        <img className="w-full h-full object-cover" src="/images/home/1.jpg" alt="Placeholder" />
+                        <ImageWrapper
+                          className="w-full h-full object-cover"
+                          alt="placeholder"
+                          src="/images/home/1.jpg"
+                          fill
+                        />
                       </div>
                     </div>
                   </section>
@@ -84,7 +90,13 @@ export default function Home() {
                     <section className="flex flex-wrap items-center mb-12 md:mb-24 xl:mb-32">
                       <div className="w-full md:w-1/2 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="/images/home/2.jpg" alt="Placeholder" />
+                          <ImageWrapper
+                            className="w-full h-full object-cover"
+                            alt="placeholder"
+                            src="/images/home/2.jpg"
+                            width={900}
+                            height={900}
+                          />
                           <figcaption>An image caption</figcaption>
                         </figure>
                       </div>
@@ -109,8 +121,21 @@ export default function Home() {
                         </blockquote>
                       </figure>
 
-                      <figure className="md:absolute md:top-0 md:right-0 md:bottom-0 z-0 opacity-60">
-                        <img className="w-full h-full object-cover object-center" src="/images/home/3.jpg" alt="Placeholder" />
+                      <figure className="md:absolute md:top-0 md:right-0 md:bottom-0 z-0 opacity-60 w-full md:w-1/2">
+                        <ImageWrapper
+                          className="w-full h-full object-cover object-center hidden md:block"
+                          alt="placeholder"
+                          src="/images/home/3.jpg"
+                          fill
+                        />
+
+                        <ImageWrapper
+                          className="w-full block md:hidden"
+                          alt="placeholder"
+                          src="/images/home/3.jpg"
+                          width={750}
+                          height={750}
+                        />
                       </figure>
                     </section>
                   </Container>

@@ -10,6 +10,7 @@ import { NextSeo } from 'next-seo'
 import NavSection from '@/components/nav-section'
 import Hero from '@/components/hero'
 import Header from '@/components/header'
+import ImageWrapper from '@/components/image-wrapper'
 
 export default function PublicServant() {
   const containerRef = useRef(null)
@@ -69,7 +70,13 @@ export default function PublicServant() {
 
                         <div className="w-full md:w-1/2 relative content overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="/images/public-servant/2.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/public-servant/2.jpg"}
+                              width={900}
+                              height={600}
+                            />
                             <figcaption>Image caption</figcaption>
                           </figure>
 
@@ -83,7 +90,13 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0">
                         <figure>
-                          <img className="w-full" src="/images/public-servant/3.jpg" alt="Placeholder" />
+                          <ImageWrapper
+                            className="w-full"
+                            alt="placeholder"
+                            src={"/images/public-servant/3.jpg"}
+                            width={720}
+                            height={900}
+                          />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -109,7 +122,13 @@ export default function PublicServant() {
 
                         <div className="w-full md:w-1/2 relative content overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="/images/public-servant/4.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/public-servant/4.jpg"}
+                              width={900}
+                              height={680}
+                            />
                             <figcaption>Image caption</figcaption>
                           </figure>
                         </div>
@@ -123,7 +142,13 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="seventies">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="/images/public-servant/4.jpg" alt="Placeholder" />
+                          <ImageWrapper
+                            className="w-full"
+                            alt="placeholder"
+                            src={"/images/public-servant/4.jpg"}
+                            width={900}
+                            height={680}
+                          />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -151,7 +176,13 @@ export default function PublicServant() {
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 relative content overflow-hidden mb-8 md:mb-0">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="/images/public-servant/5.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/public-servant/5.jpg"}
+                              width={900}
+                              height={700}
+                            />
                             <figcaption>Image caption</figcaption>
                           </figure>
                         </div>
@@ -178,7 +209,13 @@ export default function PublicServant() {
 
                         <div className="w-full md:w-5/12 relative content">
                           <figure className="mb-6 md:mb-8 xl:mb-10 w-full md:max-w-[450px] ml-auto">
-                            <img className="w-full" src="/images/public-servant/6.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/public-servant/6.jpg"}
+                              width={600}
+                              height={600}
+                            />
                           </figure>
                         </div>
                       </div>
@@ -191,7 +228,13 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="eighties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="/images/public-servant/7.jpg" alt="Placeholder" />
+                          <ImageWrapper
+                            className="w-full"
+                            alt="placeholder"
+                            src={"/images/public-servant/7.jpg"}
+                            width={720}
+                            height={970}
+                          />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -219,7 +262,13 @@ export default function PublicServant() {
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 relative content overflow-hidden mb-8 md:mb-0">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="/images/public-servant/8.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/public-servant/8.jpg"}
+                              width={900}
+                              height={640}
+                            />
                             <figcaption>Image caption</figcaption>
                           </figure>
                         </div>
@@ -239,7 +288,13 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="nineties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="/images/public-servant/9.jpg" alt="Placeholder" />
+                          <ImageWrapper
+                            className="w-full"
+                            alt="placeholder"
+                            src={"/images/public-servant/9.jpg"}
+                            width={900}
+                            height={650}
+                          />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -284,7 +339,13 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0">
                         <figure>
-                          <img className="w-full" src="/images/public-servant/10.jpg" alt="Placeholder" />
+                          <ImageWrapper
+                            className="w-full"
+                            alt="placeholder"
+                            src={"/images/public-servant/10.jpg"}
+                            width={900}
+                            height={650}
+                          />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -314,7 +375,13 @@ export default function PublicServant() {
 
                         <div className="w-full md:w-1/2 content md:pl-12 xl:pl-16 max-w-2xl">
                           <figure>
-                            <img className="w-full" src="/images/public-servant/11.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/public-servant/11.jpg"}
+                              width={720}
+                              height={910}
+                            />
                             <figcaption>Something</figcaption>
                           </figure>
                         </div>
@@ -359,7 +426,13 @@ export default function PublicServant() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="noughties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="/images/public-servant/12.jpg" alt="Placeholder" />
+                          <ImageWrapper
+                            className="w-full"
+                            alt="placeholder"
+                            src={"/images/public-servant/12.jpg"}
+                            width={900}
+                            height={900}
+                          />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
@@ -404,7 +477,13 @@ export default function PublicServant() {
                     <section className="flex flex-wrap items-center mb-12 md:mb-24 xl:mb-32" id="noughties">
                       <div className="w-full md:w-1/2 relative content order-2 md:order-1">
                         <figure>
-                          <img className="w-full" src="/images/public-servant/13.jpg" alt="Placeholder" />
+                          <ImageWrapper
+                            className="w-full"
+                            alt="placeholder"
+                            src={"/images/public-servant/13.jpg"}
+                            width={900}
+                            height={640}
+                          />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>

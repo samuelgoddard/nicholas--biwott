@@ -2,6 +2,7 @@ import Container from "./container";
 import TimelineNav from "./timeline-nav";
 import { m } from 'framer-motion'
 import { reveal } from '@/helpers/transitions'
+import ImageWrapper from "./image-wrapper";
 
 export default function Hero({ metaText, firstWord, secondWord, thirdWord, image, imageCaption, quote, quoteCaption, quoteCite, timeline, reverse, wide}) {
   return (
@@ -55,7 +56,14 @@ export default function Hero({ metaText, firstWord, secondWord, thirdWord, image
           <section className={`flex flex-wrap mb-12 md:mb-24 xl:mb-32 ${reverse ? 'flex-row-reverse' : '' }`}>
             <div className={`w-full md:w-7/12 relative content ${reverse ? 'mb-6 md:mb-0' : '' }`}>
               <figure>
-                <img className="w-full" src={image} alt="Placeholder" />
+                <ImageWrapper
+                  className="w-full"
+                  alt="placeholder"
+                  src={image}
+                  width={900}
+                  height={660}
+                />
+
                 <figcaption>{imageCaption}</figcaption>
               </figure>
             </div>

@@ -10,6 +10,7 @@ import { NextSeo } from 'next-seo'
 import NavSection from '@/components/nav-section'
 import Hero from '@/components/hero'
 import Header from '@/components/header'
+import ImageWrapper from '@/components/image-wrapper'
 
 export default function PersonalLife() {
   const containerRef = useRef(null)
@@ -37,9 +38,9 @@ export default function PersonalLife() {
                 <m.main variants={fade} className="mb-12 md:mb-16 xl:mb-24 pt-[112px] md:pt-[138px]">
                   <Hero
                     metaText="Personal Life"
-                    firstWord="Lorem"
-                    secondWord="Ipsum"
-                    thirdWord="Dolor"
+                    firstWord="Vision"
+                    secondWord="Energy"
+                    thirdWord="Duty"
                     image="/images/early-life/1.jpg"
                     imageCaption="An Image Caption"
                     quote="Nicholas Biwott managed to do something which many of us have not succeeded in doing. He managed to have a robust public life but managed to keep his family away and secure."
@@ -56,7 +57,13 @@ export default function PersonalLife() {
                       <div className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
                         <div className="w-full md:w-5/12 relative content mb-6 md:mb-0 md:pr-8 xl:pr-12">
                           <figure>
-                            <img className="w-full" src="/images/businessman/4.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/businessman/4.jpg"}
+                              width={720}
+                              height={900}
+                            />
                             <figcaption>Something</figcaption>
                           </figure>
                         </div>
@@ -87,7 +94,13 @@ export default function PersonalLife() {
 
                         <div className="w-full md:w-7/12 relative content order-1 md:order-2">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <img className="w-full" src="/images/early-life/3.jpg" alt="Placeholder" />
+                            <ImageWrapper
+                              className="w-full"
+                              alt="placeholder"
+                              src={"/images/early-life/3.jpg"}
+                              width={900}
+                              height={600}
+                            />
                           </figure>
                         </div>
                       </div>
@@ -108,7 +121,13 @@ export default function PersonalLife() {
                     <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0 md:pr-8 xl:pr-12">
                         <figure>
-                          <img className="w-full" src="/images/businessman/4.jpg" alt="Placeholder" />
+                          <ImageWrapper
+                            className="w-full"
+                            alt="placeholder"
+                            src={"/images/businessman/4.jpg"}
+                            width={720}
+                            height={900}
+                          />
                           <figcaption>Something</figcaption>
                         </figure>
                       </div>
