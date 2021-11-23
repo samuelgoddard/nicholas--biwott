@@ -10,13 +10,61 @@ import { NextSeo } from 'next-seo'
 import NavSection from '@/components/nav-section'
 import Header from '@/components/header'
 import ImageWrapper from '@/components/image-wrapper'
+import BlockContent from '@sanity/block-content-to-react'
+import SanityPageService from '@/services/sanityPageService'
 
-export default function Home() {
+const query = `{
+  "home": *[_type == "home"][0]{
+    title,
+    heroWord1,
+    heroWord2,
+    heroWord3,
+    heroText,
+    heroImage {
+      asset -> {
+        ...
+      },
+      caption,
+      alt
+    },
+    supportingContentImage {
+      asset -> {
+        ...
+      },
+      caption,
+      alt
+    },
+    supportingContent,
+    supportingQuote {
+      quoteText,
+      author,
+      authorTitle,
+      quoteImage {
+        asset -> {
+          ...
+        },
+        caption,
+        alt
+      },
+    },
+    seo {
+      ...,
+      shareGraphic {
+        asset->
+      }
+    }
+  },
+}`
+
+const pageService = new SanityPageService(query)
+
+export default function Home(initialData) {
+  const { data: { home, products } } = pageService.getPreviewHook(initialData)()
   const containerRef = useRef(null)
 
   return (
     <Layout>
-      <NextSeo title="Home" />
+      <NextSeo title={home.title} />
       
       <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.05 }}
@@ -49,13 +97,13 @@ export default function Home() {
                             className="text-5xl md:text-6xl xl:text-7xl 3xl:text-8xl leading-[1.2] md:leading-[1.1] xl:leading-[1.1] 3xl:leading-[1.12] font-normal"
                           >
                             <span className="block overflow-hidden">
-                              <m.span variants={reveal} className="block text-black">Statesman.</m.span>
+                              <m.span variants={reveal} className="block text-black">{home.heroWord1}.</m.span>
                             </span>
                             <span className="block overflow-hidden">
-                              <m.span variants={reveal} className="block text-green">Entrepreneur.</m.span>
+                              <m.span variants={reveal} className="block text-green">{home.heroWord2}.</m.span>
                             </span>
                             <span className="block overflow-hidden">
-                              <m.span variants={reveal} className="block text-red">Humanitarian.</m.span>
+                              <m.span variants={reveal} className="block text-red">{home.heroWord3}.</m.span>
                             </span>
                           </m.h1>
                           
@@ -68,7 +116,9 @@ export default function Home() {
                             }}
                             className="content md:max-w-[330px] xl:max-w-[490px]"
                           >
-                            <m.p variants={fade} className="text-lg xl:text-xl">Nicholas Biwott dedicated his life to Kenya and her people. For over 50 years, as a public servant, philanthropist, and entrepreneur, he strove to build a strong, fair and bright future for his country.</m.p>
+                            <m.div variants={fade} className="content">
+                              <BlockContent serializers={{ container: ({ children }) => children }} blocks={home.heroText} />
+                            </m.div>
                           </m.div>
                         </div>
                       </div>
@@ -79,7 +129,7 @@ export default function Home() {
                         <ImageWrapper
                           className="w-full h-full object-cover"
                           alt="placeholder"
-                          src="/images/home/1.jpg"
+                          src={home.heroImage.asset.url}
                           fill
                         />
                       </div>
@@ -92,18 +142,18 @@ export default function Home() {
                         <figure>
                           <ImageWrapper
                             className="w-full h-full object-cover"
-                            alt="placeholder"
-                            src="/images/home/2.jpg"
+                            alt={home.supportingContentImage.alt}
+                            src={home.supportingContentImage.asset.url}
                             width={900}
                             height={900}
                           />
-                          <figcaption>An image caption</figcaption>
+                          {home.supportingContentImage.caption && (
+                            <figcaption>{home.supportingContentImage.caption}</figcaption>
+                          )}
                         </figure>
                       </div>
                       <div className="w-full md:w-1/2 content md:px-12 xl:px-16 order-1 md:order-2 mb-6 md:mb-0 max-w-2xl" data-scroll data-scroll-speed={0.25}>
-                        <p>Working in the governments of the Fathers of Kenyan Independence, Jomo Kenyatta and Daniel arap Moi, he held eight senior civil servant and ministerial posts.</p>
-                        
-                        <p>Widely regarded as the most competent and effective minister of the arap Moi government, he helped shape the largest economy in Eastern Africa and was at the forefront of efforts to deepen regional cooperation.</p>
+                        <BlockContent serializers={{ container: ({ children }) => children }} blocks={home.supportingContent} />
 
                         <div className="mt-5">
                           <ButtonLink destination="/" a11yText="Find Out More" label="Find Out More" />
@@ -116,8 +166,8 @@ export default function Home() {
                     <section className="content relative py-10 md:py-24 xl:py-32">
                       <figure className="w-11/12 relative z-10 mb-5 md:mb-0">
                         <blockquote data-scroll data-scroll-speed={0.55}>
-                          <p>“When the history of this country is written, it will include men and women who quietly, but firmly and with confidence, are responsible for what Kenya is today – a sound country, a stable country, with a growing economy. Nicholas Biwott is one of those people.”</p>
-                          <figcaption>Uhuru Kenyatta<cite>President of Kenya (2013 - )</cite></figcaption>
+                          <p>{home.supportingQuote.quoteText}.”</p>
+                          <figcaption>{home.supportingQuote.author}<cite>{home.supportingQuote.authorTitle}</cite></figcaption>
                         </blockquote>
                       </figure>
 
@@ -125,14 +175,14 @@ export default function Home() {
                         <ImageWrapper
                           className="w-full h-full object-cover object-center hidden md:block"
                           alt="placeholder"
-                          src="/images/home/3.jpg"
+                          src={home.supportingQuote.quoteImage.asset.url}
                           fill
                         />
 
                         <ImageWrapper
                           className="w-full block md:hidden"
                           alt="placeholder"
-                          src="/images/home/3.jpg"
+                          src={home.supportingQuote.quoteImage.asset.url}
                           width={750}
                           height={750}
                         />
@@ -155,4 +205,12 @@ export default function Home() {
       </LocomotiveScrollProvider>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const cms = await pageService.fetchQuery(context)
+
+  return {
+    props: { ...cms }
+  }
 }
