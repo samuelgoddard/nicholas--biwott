@@ -10,6 +10,7 @@ import { NextSeo } from 'next-seo'
 import NavSection from '@/components/nav-section'
 import Header from '@/components/header'
 import ImageWrapper from '@/components/image-wrapper'
+import SanityImageWrapper from '@/components/sanity-image-wrapper'
 import BlockContent from '@sanity/block-content-to-react'
 import SanityPageService from '@/services/sanityPageService'
 
@@ -64,7 +65,11 @@ export default function Home(initialData) {
 
   return (
     <Layout>
-      <NextSeo title={home.title} />
+      {/* @TODO Test this works... */}
+      <NextSeo
+        title={home.seo?.metaTitle ? home.seo.metaTitle : home.title }
+        description={home.seo?.metaDesc ? home.seo.metaDesc : null }
+      />
       
       <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.05 }}
@@ -140,12 +145,12 @@ export default function Home(initialData) {
                     <section className="flex flex-wrap items-center mb-12 md:mb-24 xl:mb-32">
                       <div className="w-full md:w-1/2 relative content order-2 md:order-1">
                         <figure>
-                          <ImageWrapper
+                          <SanityImageWrapper
                             className="w-full h-full object-cover"
                             alt={home.supportingContentImage.alt}
-                            src={home.supportingContentImage.asset.url}
-                            width={900}
-                            height={900}
+                            image={home.supportingContentImage.asset}
+                            baseWidth={900}
+                            baseHeight={900}
                           />
                           {home.supportingContentImage.caption && (
                             <figcaption>{home.supportingContentImage.caption}</figcaption>
@@ -172,19 +177,19 @@ export default function Home(initialData) {
                       </figure>
 
                       <figure className="md:absolute md:top-0 md:right-0 md:bottom-0 z-0 opacity-60 w-full md:w-1/2">
-                        <ImageWrapper
+                        <SanityImageWrapper
                           className="w-full h-full object-cover object-center hidden md:block"
-                          alt="placeholder"
-                          src={home.supportingQuote.quoteImage.asset.url}
+                          alt={home.supportingQuote.quoteImage.alt}
+                          image={home.supportingQuote.quoteImage.asset}
                           fill
                         />
 
-                        <ImageWrapper
+                        <SanityImageWrapper
                           className="w-full block md:hidden"
-                          alt="placeholder"
-                          src={home.supportingQuote.quoteImage.asset.url}
-                          width={750}
-                          height={750}
+                          alt={home.supportingQuote.quoteImage.alt}
+                          image={home.supportingQuote.quoteImage.asset}
+                          baseWidth={750}
+                          baseHeight={750}
                         />
                       </figure>
                     </section>

@@ -1,8 +1,6 @@
 import { useRef } from 'react'
 import Layout from '@/components/layout'
-import Footer from '@/components/footer'
 import Container from '@/components/container'
-import ButtonLink from '@/components/buttonLink'
 import { fade } from '@/helpers/transitions'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
@@ -46,7 +44,7 @@ export default function Menu() {
                           <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
                             <Link href="/quotes">
                               <a className="block">
-                                Quote
+                                Quotes
                               </a>
                             </Link>
                           </li>

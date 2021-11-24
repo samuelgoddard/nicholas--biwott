@@ -2,19 +2,49 @@ import { useRef } from 'react'
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
 import Container from '@/components/container'
-import { fade } from '@/helpers/transitions'
+import ButtonLink from '@/components/buttonLink'
+import { fade, reveal } from '@/helpers/transitions'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
+import NavSection from '@/components/nav-section'
 import Header from '@/components/header'
 import Hero from '@/components/hero'
+import ImageWrapper from '@/components/image-wrapper'
+import BlockContent from '@sanity/block-content-to-react'
+import SanityPageService from '@/services/sanityPageService'
 
-export default function Privacy() {
+// Test these queries...
+const query = `*[_type == "press" && slug.current == $slug][0]{
+  title,
+  category-> {
+    title
+  },
+  postDate,
+  content,
+  slug {
+    current
+  },
+  seo {
+    ...,
+    shareGraphic {
+        asset->
+    }
+  }
+}`
+  
+const pageService = new SanityPageService(query)
+  
+export default function PressSlug(initialData) {
+  const { data: { seo, title, content, postDate, category } } = pageService.getPreviewHook(initialData)()
   const containerRef = useRef(null)
 
   return (
     <Layout>
-      <NextSeo title="Sources" />
+      <NextSeo
+        title={seo?.metaTitle ? seo.metaTitle : title }
+        description={seo?.metaDesc ? seo.metaDesc : null }
+      />
       
       <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.05 }}
@@ -35,19 +65,12 @@ export default function Privacy() {
                 <m.main variants={fade} className="mb-12 md:mb-16 xl:mb-24 pt-[112px] md:pt-[138px]">
                   
                   <div className="mb-12 md:mb-0">
-                    <Hero metaText="Sources" firstWord="Sources" />
+                    <Hero metaText="Press" firstWord={title} secondMetaText={`${postDate} • ${ category ? category.title : '' }`} /> 
                   </div>
 
                   <Container thinnest>
                     <section className="mb-12 md:mb-24 xl:mb-32 content">
-
-                      <h2>Testing Content</h2>
-
-                      <p>When you visit the Site, we automatically collect certain information about your device, including information about your web browser, IP address, time zone, and some of the cookies that are installed on your device. Additionally, as you browse the Site, we collect information about the individual web pages or products that you view, what websites or search terms referred you to the Site, and information about how you interact with the Site. We refer to this automatically-collected information as “Device Information.”.</p>
-                      
-                      <p>Source to something <a href="#">Link to source</a></p>
-                      <p>Source to something <a href="#">Link to source</a></p>
-                      <p>Source to something <a href="#">Link to source</a></p>
+                      <BlockContent serializers={{ container: ({ children }) => children }} blocks={content} />
                     </section>
                   </Container>
                 </m.main>
@@ -62,4 +85,19 @@ export default function Privacy() {
       </LocomotiveScrollProvider>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const cms = await pageService.fetchQuery(context)
+  return {
+      props: { ...cms }
+    }
+}
+
+export async function getStaticPaths() {
+  const paths = await pageService.fetchPaths('press')
+  return {
+    paths: paths,
+    fallback: true,
+  };
 }

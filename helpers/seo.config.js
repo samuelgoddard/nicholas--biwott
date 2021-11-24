@@ -1,12 +1,12 @@
 export default {
-  defaultTitle: 'Boilerplate | Next x Tailwind x Motion x Locomotive Scroll',
-  description: 'A simple Next.js starter kit with Tailwind, Framer Motion and Locomotive.',
-  titleTemplate: '%s | Next x Tailwind x Motion x Locomotive',
+  defaultTitle: 'Nicholas Biwott | Statesman. Entrepreneur. Humanitarian.',
+  description: 'Nicholas Biwott dedicated his life to Kenya and her people. For over 50 years, as a public servant, philanthropist, and entrepreneur, he strove to build a strong, fair and bright future for his country.',
+  titleTemplate: '%s | Nicholas Biwott',
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://sg-next-tailwind-motion.vercel.app/',
-    site_name: 'Next x Tailwind x Motion x Locomotive',
+    url: 'https://nicholas-biwott.vercel.app/',
+    site_name: 'Nicholas Biwott',
   },
   twitter: {
     handle: '@samuelgoddard',

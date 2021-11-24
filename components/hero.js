@@ -2,9 +2,10 @@ import Container from "./container";
 import TimelineNav from "./timeline-nav";
 import { m } from 'framer-motion'
 import { reveal } from '@/helpers/transitions'
-import ImageWrapper from "./image-wrapper";
+import ImageWrapper from "./image-wrapper"
+import SanityImageWrapper from "./sanity-image-wrapper"
 
-export default function Hero({ metaText, firstWord, secondWord, thirdWord, image, imageCaption, quote, quoteCaption, quoteCite, timeline, reverse, wide}) {
+export default function Hero({ metaText, secondMetaText, firstWord, secondWord, thirdWord, image, imageCaption, quote, quoteCaption, quoteCite, timeline, reverse, wide}) {
   return (
     <>
       <section className="mb-8 md:mb-16 xl:mb-24 relative">
@@ -40,6 +41,12 @@ export default function Hero({ metaText, firstWord, secondWord, thirdWord, image
                   </span>
                 )}
               </m.h1>
+              
+              {secondMetaText && (
+                <span className="block overflow-hidden mb-5">
+                  <m.span variants={reveal} className="block text-sm uppercase text-gold">{secondMetaText}</m.span>
+                </span>
+              )}
             </div>
           </Container>
         </div>
@@ -56,15 +63,17 @@ export default function Hero({ metaText, firstWord, secondWord, thirdWord, image
           <section className={`flex flex-wrap mb-12 md:mb-24 xl:mb-32 ${reverse ? 'flex-row-reverse' : '' }`}>
             <div className={`w-full md:w-7/12 relative content ${reverse ? 'mb-6 md:mb-0' : '' }`}>
               <figure>
-                <ImageWrapper
+                <SanityImageWrapper
                   className="w-full"
                   alt="placeholder"
-                  src={image}
-                  width={900}
-                  height={660}
+                  image={image}
+                  baseWidth={900}
+                  baseHeight={660}
                 />
-
-                <figcaption>{imageCaption}</figcaption>
+                
+                {imageCaption && (
+                  <figcaption>{imageCaption}</figcaption>
+                )}
               </figure>
             </div>
 

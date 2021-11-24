@@ -2,7 +2,6 @@ import { useRef } from 'react'
 import Layout from '@/components/layout'
 import Footer from '@/components/footer'
 import Container from '@/components/container'
-import ButtonLink from '@/components/buttonLink'
 import { fade } from '@/helpers/transitions'
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
 import { LazyMotion, domAnimation, m } from 'framer-motion'
@@ -11,13 +10,53 @@ import NavSection from '@/components/nav-section'
 import Hero from '@/components/hero'
 import Header from '@/components/header'
 import ImageWrapper from '@/components/image-wrapper'
+import SanityImageWrapper from '@/components/sanity-image-wrapper'
+import BlockContent from '@sanity/block-content-to-react'
+import SanityPageService from '@/services/sanityPageService'
 
-export default function PublicServant() {
+// Test these queries...
+const query = `{
+  "publicServant": *[_type == "publicServant"][0]{
+    title,
+    hero {
+      heroMetaText,
+      heroWord1,
+      heroWord2,
+      heroWord3,
+      heroQuote {
+        quoteText,
+        author,
+        authorTitle,
+        quoteImage {
+          asset -> {
+            ...
+          },
+          caption,
+          alt
+        },
+      }
+    },
+    seo {
+      ...,
+      shareGraphic {
+        asset->
+      }
+    }
+  },
+}`
+
+const pageService = new SanityPageService(query)
+
+export default function PublicServant(initialData) {
+  const { data: { publicServant } } = pageService.getPreviewHook(initialData)()
   const containerRef = useRef(null)
 
   return (
     <Layout>
-      <NextSeo title="Public Servant" />
+      <NextSeo
+        title={publicServant.seo?.metaTitle ? publicServant.seo.metaTitle : publicServant.title }
+        description={publicServant.seo?.metaDesc ? publicServant.seo.metaDesc : null }
+      />
       
       <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.05 }}
@@ -37,15 +76,15 @@ export default function PublicServant() {
                 {/* pt-[108px] md:pt-[136px] xl:pt-[156px] */}
                 <m.main variants={fade} className="mb-12 md:mb-16 xl:mb-24 pt-[112px] md:pt-[138px]">
                   <Hero
-                    metaText="Public Servant"
-                    firstWord="Energy"
-                    secondWord="Vision"
-                    thirdWord="Kenya"
-                    image="/images/public-servant/1.jpg"
-                    imageCaption="An Image Caption"
-                    quote="Biwott played a central role in the formation of the modern Kenyan state at a critical moment in our history, when it was vital to have every hand on deck to ensure that Kenya’s first transfer of power went smoothly, and ensured national unity at a very tense and trying time."
-                    quoteCaption="Raila Odinga"
-                    quoteCite="Prime Minister of Kenya (2008-13)"
+                    metaText={publicServant.hero.heroMetaText}
+                    firstWord={publicServant.hero.heroWord1}
+                    secondWord={publicServant.hero.heroWord2}
+                    thirdWord={publicServant.hero.heroWord3}
+                    image={publicServant.hero.heroQuote.quoteImage.asset}
+                    imageCaption={publicServant.hero.heroQuote.quoteImage.caption}
+                    quote={publicServant.hero.heroQuote.quoteText}
+                    quoteCaption={publicServant.hero.heroQuote.author}
+                    quoteCite={publicServant.hero.heroQuote.authorTitle}
                     reverse
                     timeline
                   />
@@ -514,4 +553,12 @@ export default function PublicServant() {
       </LocomotiveScrollProvider>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const cms = await pageService.fetchQuery(context)
+
+  return {
+    props: { ...cms }
+  }
 }

@@ -67,3 +67,10 @@ h1, .h1, h2, .h2, h3, .h3 {
 .object-cover img {
   @apply object-cover object-center w-full h-full;
 }
+
+@screen lg {
+  .css-cols {
+    columns: 2;
+    column-gap: 30px;
+  }
+}
