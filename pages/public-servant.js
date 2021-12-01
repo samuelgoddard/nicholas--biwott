@@ -91,7 +91,7 @@ export default function PublicServant(initialData) {
 
                   {/* SIXTIES */}
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32" id="sixties">
+                    <section className="content relative mb-12 md:mb-24 xl:mb-32" id="sixties" data-scroll data-scroll-repeat data-scroll-call="sixties">
                       <div className="absolute top-0 left-0 ml-[-10%] 3xl:ml-[-15%] mt-[-15%] flex flex-wrap overflow-hidden z-0" data-scroll data-scroll-speed={-0.7}>
                         <span className="w-full text-gold block text-[28vw] xl:text-[25vw] 2xl:text-[22vw] 3xl:text-[400px] leading-none font-display opacity-10">60's</span>
                       </div>
@@ -178,7 +178,7 @@ export default function PublicServant(initialData) {
 
                   {/* SEVENTIES */}
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="seventies">
+                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="seventies" data-scroll data-scroll-repeat data-scroll-call="seventies">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <ImageWrapper
@@ -264,7 +264,7 @@ export default function PublicServant(initialData) {
 
                   {/* EIGHTIES */}
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="eighties">
+                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="eighties" data-scroll data-scroll-repeat data-scroll-call="eighties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <ImageWrapper
@@ -324,7 +324,7 @@ export default function PublicServant(initialData) {
 
                   {/* NINETIES */}
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="nineties">
+                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="nineties" data-scroll data-scroll-repeat data-scroll-call="nineties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <ImageWrapper
@@ -462,7 +462,7 @@ export default function PublicServant(initialData) {
 
                   {/* Noughties */}
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="noughties">
+                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="noughties" data-scroll data-scroll-repeat data-scroll-call="noughties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <ImageWrapper
