@@ -45,7 +45,7 @@ const query = `{
       caption,
       alt
     },
-    sixtiesSection1Right,
+    sixtiesSection1TextRight,
     sixtiesSection2Quote {
       quoteText,
       author,
