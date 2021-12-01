@@ -8,8 +8,24 @@ import { LazyMotion, domAnimation, m } from 'framer-motion'
 import { NextSeo } from 'next-seo'
 import Header from '@/components/header'
 import TimelineNav from '@/components/timeline-nav'
+import SanityImageWrapper from '@/components/sanity-image-wrapper'
+import SanityPageService from '@/services/sanityPageService'
 
-export default function Timeline() {
+// Test these queries...
+const query = `{
+  "timeline": *[_type == "timeline"][0]{
+    title,
+    timelineItems[] {
+      timelineItemYear,
+      timelineItemText
+    }
+  },
+}`
+
+const pageService = new SanityPageService(query)
+
+export default function Timeline(initialData) {
+  const { data: { timeline } } = pageService.getPreviewHook(initialData)()
   const containerRef = useRef(null)
 
   return (
@@ -57,131 +73,22 @@ export default function Timeline() {
                       </div>
                       
                       <div className="flex flex-wrap md:-mx-12">
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 relative" data-scroll data-scroll-speed={1.25}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
 
-                          <span className="block uppercase text-gold mb-5">1940</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
+                        {timeline.timelineItems.map((item, i) => {
+                          return (
+                            <div className={`w-full md:w-1/2 md:px-12 mb-8 relative ${i%2 !== 0 ? 'md:mt-16 xl:mt-20' : ''}`} data-scroll data-scroll-speed={i%2 !== 0 ? 1.25 : 1} key={i}>
+                              
+                              {i%2 !== 0 ? (
+                                <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
+                              ) : (
+                                <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
+                              )}
 
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 mt-6 md:mt-20 xl:mt-28 relative" data-scroll data-scroll-speed={1}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1948-1952</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 relative" data-scroll data-scroll-speed={1.25}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1940</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 mt-6 md:mt-20 xl:mt-28 relative" data-scroll data-scroll-speed={1}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
-                        
-                          <span className="block uppercase text-gold mb-5">1948-1952</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 relative" data-scroll data-scroll-speed={1.25}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1940</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 mt-6 md:mt-20 xl:mt-28 relative" data-scroll data-scroll-speed={1}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1948-1952</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 relative" data-scroll data-scroll-speed={1.25}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1940</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 mt-6 md:mt-20 xl:mt-28 relative" data-scroll data-scroll-speed={1}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1948-1952</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 relative" data-scroll data-scroll-speed={1.25}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1940</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 mt-6 md:mt-20 xl:mt-28 relative" data-scroll data-scroll-speed={1}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1948-1952</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 relative" data-scroll data-scroll-speed={1.25}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1940</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 mt-6 md:mt-20 xl:mt-28 relative" data-scroll data-scroll-speed={1}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1948-1952</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 relative" data-scroll data-scroll-speed={1.25}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1940</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 mt-6 md:mt-20 xl:mt-28 relative" data-scroll data-scroll-speed={1}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1948-1952</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 relative" data-scroll data-scroll-speed={1.25}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1940</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 mt-6 md:mt-20 xl:mt-28 relative" data-scroll data-scroll-speed={1}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1948-1952</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 relative" data-scroll data-scroll-speed={1.25}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:left-auto mt-[4px] mx-auto md:mr-[2px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-0 xl:translate-x-0 bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1940</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
-
-                        <div className="w-full md:w-1/2 md:px-12 mb-8 mt-6 md:mt-20 xl:mt-28 relative" data-scroll data-scroll-speed={1}>
-                          <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>
-
-                          <span className="block uppercase text-gold mb-5">1948-1952</span>
-                          <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">Nicholas Biwott is born to Cheserem and Maria Soti in Chebior Village, British Kenya,</span>
-                        </div>
+                              <span className="block uppercase text-gold mb-5">{item.timelineItemYear}</span>
+                              <span className="block font-display text-2xl md:text-2xl xl:text-3xl text-navy leading-[1.25] md:leading-[1.25] xl:leading-[1.25]">{item.timelineItemText}</span>
+                            </div>
+                          )})
+                        }
                       </div>
                     </section>
                   </Container>
@@ -197,4 +104,12 @@ export default function Timeline() {
       </LocomotiveScrollProvider>
     </Layout>
   )
+}
+
+export async function getStaticProps(context) {
+  const cms = await pageService.fetchQuery(context)
+
+  return {
+    props: { ...cms }
+  }
 }
