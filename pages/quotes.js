@@ -107,7 +107,7 @@ export default function Quotes(initialData) {
                             <figure>
                               <SanityImageWrapper
                                 className="w-full"
-                                alt={quote.quoteImage.alt}
+                                alt={quote.quoteImage.alt ? quote.quoteImage.alt : null}
                                 image={quote.quoteImage.asset}
                                 baseWidth={720}
                                 baseHeight={900}
