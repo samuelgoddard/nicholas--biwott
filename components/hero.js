@@ -60,7 +60,7 @@ export default function Hero({ metaText, secondMetaText, firstWord, secondWord, 
       
       {image && (
         <Container>
-          <section className={`flex flex-wrap mb-12 md:mb-24 xl:mb-32 ${reverse ? 'flex-row-reverse' : '' }`}>
+          <section className={`flex flex-wrap mb-24 md:mb-32 xl:mb-40 ${reverse ? 'flex-row-reverse' : '' }`}>
             <div className={`w-full md:w-7/12 relative content ${reverse ? 'mb-6 md:mb-0' : '' }`}>
               <figure>
                 <SanityImageWrapper

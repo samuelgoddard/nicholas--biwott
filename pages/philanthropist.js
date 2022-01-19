@@ -141,7 +141,7 @@ export default function Philanthropist(initialData) {
                   />
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16">
                         <h2 className="block text-3xl md:text-4xl xl:text-5xl xl:leading-[1.09] font-normal text-navy">{philanthropist.section1Heading}</h2>
                       </div>
@@ -166,7 +166,7 @@ export default function Philanthropist(initialData) {
                   </Container>
 
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48 items-center">
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0 md:pr-8 xl:pr-12">
                         <figure>
                           <SanityImageWrapper
@@ -193,7 +193,7 @@ export default function Philanthropist(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="w-12/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 ml-auto">
                         <h2 className="block text-3xl md:text-3xl xl:text-4xl xl:leading-[1.25] font-normal text-navy">{philanthropist.section3Heading}</h2>
                       </div>
@@ -219,7 +219,7 @@ export default function Philanthropist(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48 items-center">
                       <div className="w-full md:w-7/12 content order-2 md:order-1">
                         <figure className="block">
                           <blockquote className="blockquote blockquote--small md:pr-16 xl:pr-24">
@@ -245,7 +245,7 @@ export default function Philanthropist(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="w-12/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 ml-auto">
                         <h2 className="block text-3xl md:text-3xl xl:text-4xl xl:leading-[1.25] font-normal text-navy">{philanthropist.section5Heading}</h2>
                       </div>

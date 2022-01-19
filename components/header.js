@@ -6,10 +6,11 @@ import LogoMark from "./logo-mark";
 import TimelineNav from "./timeline-nav";
 import Container from "./container";
 
-export default function Header({ timeline }) {
+export default function Header({ timeline, menu }) {
   const { scroll } = useLocomotiveScroll()
   let [showLogo, setShowLogo] = useState(false)
   let [showTimeline, setShowTimeline] = useState(false)
+  let [showMenu, setShowMenu] = useState(false)
 
   useEffect(() => {
     if (scroll) {
@@ -26,7 +27,12 @@ export default function Header({ timeline }) {
         }
       })
     }
-  }, [scroll, showLogo])
+    if (menu === true) {
+      setShowMenu(true)
+    } else {
+      setShowMenu(false)
+    }
+  }, [scroll, showLogo, menu, showMenu])
 
   return (
     <header className="p-6 md:p-10 xl:p-12 fixed top-0 left-0 right-0 w-full z-10" data-scroll data-scroll-sticky data-scroll-target="#__next">
@@ -60,8 +66,14 @@ export default function Header({ timeline }) {
           </div>
         )}
 
-        <nav className="ml-auto flex space-x-3 text-[18px] md:text-[18px] xl:text-[18px] w-auto mt-[2px] md:mt-0">
-          <Link href="/menu"><a className="block uppercase">Menu</a></Link>
+        <nav className="ml-auto flex space-x-3 text-[18px] md:text-[18px] xl:text-[18px] mt-[2px] md:mt-0 relative overflow-hidden w-auto">
+            <Link href={ menu ? '/' : '/menu'}>
+              <a className={`block uppercase relative overflow-hidden pl-4`}>
+                <span className={`block transition-transform ease-in-out duration-500 ${ showMenu ? 'transition-transform ease-in-out duration-500 translate-y-5' : 'transition-transform ease-in-out duration-500 translate-y-0' }`}>Menu</span>
+
+                <span className={`absolute top-0 right-0 block transition-transform ease-in-out duration-500 ${ showMenu ? 'transition-transform ease-in-out duration-500 translate-y-0' : 'transition-transform ease-in-out duration-500 translate-y-[-25px]' }`}>Close</span>
+              </a>
+            </Link>
         </nav>
       </div>
     </header>

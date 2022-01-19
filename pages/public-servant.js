@@ -240,7 +240,7 @@ export default function PublicServant(initialData) {
 
                   {/* SIXTIES */}
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32" id="sixties" data-scroll data-scroll-repeat data-scroll-call="sixties">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48" id="sixties" data-scroll data-scroll-repeat data-scroll-call="sixties">
                       <div className="absolute top-0 left-0 ml-[-10%] 3xl:ml-[-15%] mt-[-15%] flex flex-wrap overflow-hidden z-0" data-scroll data-scroll-speed={-0.7}>
                         <span className="w-full text-gold block text-[28vw] xl:text-[25vw] 2xl:text-[22vw] 3xl:text-[400px] leading-none font-display opacity-10">60's</span>
                       </div>
@@ -275,7 +275,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48 items-center">
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0">
                         <figure>
                           <SanityImageWrapper
@@ -301,7 +301,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 content md:pr-12 xl:pr-16 max-w-2xl mb-8 md:mb-0">
                           <BlockContent serializers={{ container: ({ children }) => children }} blocks={publicServant.sixtiesSection3Text} />
@@ -327,7 +327,7 @@ export default function PublicServant(initialData) {
 
                   {/* SEVENTIES */}
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="seventies" data-scroll data-scroll-repeat data-scroll-call="seventies">
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48" id="seventies" data-scroll data-scroll-repeat data-scroll-call="seventies">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <SanityImageWrapper
@@ -354,7 +354,7 @@ export default function PublicServant(initialData) {
 
                               
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="absolute top-0 right-0 mr-[-7%] 3xl:mr-[-15%] mt-[-8%] flex flex-wrap overflow-hidden z-0" data-scroll data-scroll-speed={-0.7}>
                         <span className="w-full text-gold block text-[28vw] xl:text-[25vw] 2xl:text-[22vw] 3xl:text-[400px] leading-none font-display opacity-10">70's</span>
                       </div>
@@ -387,7 +387,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-7/12 content md:pr-16 xl:pr-24 mb-8 md:mb-0">
                           <h2 className="block text-3xl md:text-4xl xl:text-5xl font-normal text-navy">{publicServant.seventiesSection2Heading}</h2>
@@ -402,7 +402,7 @@ export default function PublicServant(initialData) {
                               alt={publicServant.seventiesSection2Image.alt}
                               image={publicServant.seventiesSection2Image.asset}
                               baseWidth={900}
-                              baseHeight={600}
+                              baseHeight={1100}
                             />
                             {publicServant.seventiesSection2Image.caption && (
                               <figcaption>{publicServant.seventiesSection2Image.caption}</figcaption>
@@ -414,7 +414,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="eighties" data-scroll data-scroll-repeat data-scroll-call="eighties">
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48" id="eighties" data-scroll data-scroll-repeat data-scroll-call="eighties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <SanityImageWrapper
@@ -422,7 +422,7 @@ export default function PublicServant(initialData) {
                             alt={publicServant.seventiesSection3Quote.quoteImage.alt}
                             image={publicServant.seventiesSection3Quote.quoteImage.asset}
                             baseWidth={720}
-                            baseHeight={970}
+                            baseHeight={550}
                           />
                           {publicServant.seventiesSection3Quote.quoteImage.caption && (<figcaption>{publicServant.seventiesSection3Quote.quoteImage.caption}</figcaption>)}
                         </figure>
@@ -441,7 +441,7 @@ export default function PublicServant(initialData) {
                   
                   {/* EIGHTIES */}
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="absolute top-0 right-0 mr-[-7%] 3xl:mr-[-15%] mt-[-8%] flex flex-wrap overflow-hidden z-0" data-scroll data-scroll-speed={-0.7}>
                         <span className="w-full text-gold block text-[28vw] xl:text-[25vw] 2xl:text-[22vw] 3xl:text-[400px] leading-none font-display opacity-10">80's</span>
                       </div>
@@ -476,7 +476,7 @@ export default function PublicServant(initialData) {
 
                   {/* NINETIES */}
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="nineties" data-scroll data-scroll-repeat data-scroll-call="nineties">
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48" id="nineties" data-scroll data-scroll-repeat data-scroll-call="nineties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <SanityImageWrapper
@@ -502,7 +502,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="absolute top-0 right-0 mr-[-7%] 3xl:mr-[-15%] mt-[-8%] flex flex-wrap overflow-hidden z-0" data-scroll data-scroll-speed={-0.7}>
                         <span className="w-full text-gold block text-[28vw] xl:text-[25vw] 2xl:text-[22vw] 3xl:text-[400px] leading-none font-display opacity-10">90's</span>
                       </div>
@@ -524,7 +524,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32 items-center">
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48 items-center">
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0">
                         <figure>
                           <SanityImageWrapper
@@ -532,7 +532,7 @@ export default function PublicServant(initialData) {
                             alt={publicServant.ninetiesSection2Quote.quoteImage.alt}
                             image={publicServant.ninetiesSection2Quote.quoteImage.asset}
                             baseWidth={900}
-                            baseHeight={650}
+                            baseHeight={1000}
                           />
                           {publicServant.ninetiesSection2Quote.quoteImage.caption && (<figcaption>{publicServant.ninetiesSection2Quote.quoteImage.caption}</figcaption>)}
                         </figure>
@@ -550,7 +550,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="w-11/12 md:w-8/12 mb-5 md:mb-8 xl:mb-12">
                         <h2 className="block text-3xl md:text-3xl xl:text-4xl xl:leading-[1.25] font-normal text-navy">{publicServant.ninetiesSection3Heading}</h2>
                       </div>
@@ -561,13 +561,13 @@ export default function PublicServant(initialData) {
                         </div>
 
                         <div className="w-full md:w-1/2 content md:pl-12 xl:pl-16 max-w-2xl">
-                          <figure className="w-full md:w-1/2 content md:pl-12 xl:pl-16 max-w-2xl">
+                          <figure className="w-full content md:pl-12 xl:pl-16 max-w-2xl">
                             <SanityImageWrapper
                               className="w-full"
                               alt={publicServant.ninetiesSection3Image.alt}
                               image={publicServant.ninetiesSection3Image.asset}
                               baseWidth={720}
-                              baseHeight={910}
+                              baseHeight={720}
                             />
                             {publicServant.ninetiesSection3Image.caption && (
                               <figcaption>{publicServant.ninetiesSection3Image.caption}</figcaption>
@@ -596,7 +596,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-1/2 relative content overflow-hidden mb-8 md:mb-0">
                           <h2 className="block text-3xl md:text-3xl xl:text-4xl xl:leading-[1.25] font-normal text-navy">{publicServant.ninetiesSection5Heading}</h2>
@@ -612,7 +612,7 @@ export default function PublicServant(initialData) {
 
                   {/* Noughties */}
                   <Container>
-                    <section className="flex flex-wrap mb-12 md:mb-24 xl:mb-32" id="noughties" data-scroll data-scroll-repeat data-scroll-call="noughties">
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48" id="noughties" data-scroll data-scroll-repeat data-scroll-call="noughties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <SanityImageWrapper
@@ -620,7 +620,7 @@ export default function PublicServant(initialData) {
                             alt={publicServant.ninetiesSection6Quote.quoteImage.alt}
                             image={publicServant.ninetiesSection6Quote.quoteImage.asset}
                             baseWidth={900}
-                            baseHeight={900}
+                            baseHeight={630}
                           />
                           {publicServant.ninetiesSection6Quote.quoteImage.caption && (<figcaption>{publicServant.ninetiesSection6Quote.quoteImage.caption}</figcaption>)}
                         </figure>
@@ -638,7 +638,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="absolute top-0 right-0 mr-[-7%] 3xl:mr-[-15%] mt-[-8%] flex flex-wrap overflow-hidden z-0" data-scroll data-scroll-speed={-0.7}>
                         <span className="w-full text-gold block text-[28vw] xl:text-[25vw] 2xl:text-[22vw] 3xl:text-[400px] leading-none font-display opacity-10">00's</span>
                       </div>
@@ -660,7 +660,7 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container>
-                    <section className="flex flex-wrap items-center mb-12 md:mb-24 xl:mb-32" id="noughties">
+                    <section className="flex flex-wrap items-center mb-24 md:mb-32 xl:mb-48" id="noughties">
                       <div className="w-full md:w-1/2 relative content order-2 md:order-1">
                         <figure>
                           <SanityImageWrapper
@@ -668,7 +668,7 @@ export default function PublicServant(initialData) {
                             alt={publicServant.noughtiesSection2Quote.quoteImage.alt}
                             image={publicServant.noughtiesSection2Quote.quoteImage.asset}
                             baseWidth={900}
-                            baseHeight={640}
+                            baseHeight={900}
                           />
                           {publicServant.noughtiesSection2Quote.quoteImage.caption && (<figcaption>{publicServant.noughtiesSection2Quote.quoteImage.caption}</figcaption>)}
                         </figure>

@@ -65,7 +65,7 @@ export default function PressSlug(initialData) {
                 <m.main variants={fade} className="mb-12 md:mb-16 xl:mb-24 pt-[112px] md:pt-[138px]">
                   
                   <div className="mb-12 md:mb-0">
-                    <Hero metaText="Press" firstWord={title} secondMetaText={`${postDate} • ${ category ? category.title : '' }`} /> 
+                    <Hero metaText="Archive" firstWord={title} secondMetaText={`${postDate} • ${ category ? category.title : '' }`} /> 
                   </div>
 
                   <Container thinnest>

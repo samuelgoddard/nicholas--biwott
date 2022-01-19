@@ -78,7 +78,7 @@ export default function Home(initialData) {
       >
         <div data-scroll-container ref={containerRef} id="scroll-container">
           <div data-scroll-section>            
-            <Header />
+            <Header/>
 
             <LazyMotion features={domAnimation}>
               <m.div

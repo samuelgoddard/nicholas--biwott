@@ -75,8 +75,38 @@ export default function Timeline(initialData) {
                       <div className="flex flex-wrap md:-mx-12">
 
                         {timeline.timelineItems.map((item, i) => {
+                          let yearId = null
+                          if (item.timelineItemYear === '1962-64') {
+                            yearId = 'sixties'
+                          }
+
+                          if (item.timelineItemYear === '1969') {
+                            yearId = 'seventies'
+                          }
+
+                          if (item.timelineItemYear === '1974') {
+                            yearId = 'eighties'
+                          }
+
+                          if (item.timelineItemYear === '1991-97') {
+                            yearId = 'nineties'
+                          }
+
+                          if (item.timelineItemYear === '2005') {
+                            yearId = 'noughties'
+                          }
+
                           return (
-                            <div className={`w-full md:w-1/2 md:px-12 mb-8 relative ${i%2 !== 0 ? 'md:mt-16 xl:mt-20' : ''}`} data-scroll data-scroll-speed={i%2 !== 0 ? 1.25 : 1} key={i}>
+                            <div className={`w-full md:w-1/2 md:px-12 mb-8 relative ${i%2 !== 0 ? 'md:mt-16 xl:mt-20' : ''}`}
+                              data-scroll data-scroll-repeat data-scroll-call={yearId} data-scroll-offset="70%, 0%"
+                              // data-scroll
+                              // data-scroll-speed={i%2 !== 0 ? 1.25 : 1}
+                              // key={i}
+                              // data-scroll-repeat={yearId}
+                              // data-scroll-call={yearId}
+                              // data-scroll-offset="40%, 100%"
+                              id={yearId}
+                            >
                               
                               {i%2 !== 0 ? (
                                 <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold border-opacity-25 rotate-45 block absolute top-0 right-0 left-0 md:right-auto mt-[4px] mx-auto md:ml-[-17px] translate-x-[-4px] md:translate-x-[3px] lg:translate-x-[-1px] bg-off-white"></span>

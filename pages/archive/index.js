@@ -46,7 +46,7 @@ export default function Press(initialData) {
 
   return (
     <Layout>
-      <NextSeo title="Press" />
+      <NextSeo title="Archive" />
       
       <LocomotiveScrollProvider
         options={{ smooth: true, lerp: 0.05 }}
@@ -68,9 +68,9 @@ export default function Press(initialData) {
                     <div className="w-full mb-6 md:mb-8 xl:mb-10">
                       <Container>
                         <div className="text-center max-w-[600px] md:max-w-[740px] xl:max-w-[900px] mx-auto">
-                          <span className="block text-sm uppercase text-gold mb-5">Press</span>
+                          <span className="block text-sm uppercase text-gold mb-5">Archive</span>
                           <h1 className="text-5xl md:text-7xl xl:text-8xl xl:leading-[1.09] font-normal">
-                            <span className="inline-block text-black mr-1">Press</span>
+                            <span className="inline-block text-black mr-1">Archive</span>
                           </h1>
                         </div>
                       </Container>
@@ -97,7 +97,7 @@ export default function Press(initialData) {
                             {press.map((item, i) => {
                               return (
                                 <li className="block" key={i}>
-                                  <Link href={`/press/${item.slug.current}`}>
+                                  <Link href={`/archive/${item.slug.current}`}>
                                     <a className={`flex py-5 md:py-8 ${i === press.length - 1 ? '' : 'border-b border-off-black border-opacity-20'}`}>
                                       <span className="text-2xl md:text-3xl xl:text-4xl xl:leading-[1.2] font-normal font-display text-navy flex-1 block">{item.title}</span>
 

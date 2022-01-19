@@ -23,7 +23,7 @@ export default function Menu() {
       >
         <div data-scroll-container ref={containerRef} id="scroll-container">
           <div data-scroll-section>
-            <Header />
+            <Header menu />
             
             <LazyMotion features={domAnimation}>
               <m.div
@@ -49,9 +49,9 @@ export default function Menu() {
                             </Link>
                           </li>
                           <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
-                            <Link href="/press">
+                            <Link href="/archive">
                               <a className="block">
-                                Press
+                                Archive
                               </a>
                             </Link>
                           </li>
@@ -63,11 +63,9 @@ export default function Menu() {
                             </Link>
                           </li>
                           <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
-                            <Link href="/contact">
-                              <a className="block">
-                                Contact
-                              </a>
-                            </Link>
+                            <a className="block" href="mailto:contact@email.com">
+                              Contact
+                            </a>
                           </li>
                         </ul>
                       </Container>

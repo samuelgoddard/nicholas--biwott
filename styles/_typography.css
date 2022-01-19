@@ -1,7 +1,7 @@
 /* Content Stylings */
 .content {
   & > p {
-    @apply mb-6 last-of-type:mb-0 text-lg xl:text-xl block;
+    @apply mb-6 last-of-type:mb-0 text-lg leading-normal block;
   }
 
   & > p > a {

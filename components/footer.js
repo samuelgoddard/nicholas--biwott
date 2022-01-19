@@ -59,9 +59,9 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
-                  <Link href="/press">
+                  <Link href="/archive">
                     <a className="block">
-                      Press
+                      Archive
                     </a>
                   </Link>
                 </li>
@@ -87,11 +87,9 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
-                  <Link href="/contact">
-                    <a className="block">
-                      Contact
-                    </a>
-                  </Link>
+                  <a className="block" href="mailto:contact@email.com">
+                    Contact
+                  </a>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/terms-and-conditions">

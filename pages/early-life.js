@@ -116,7 +116,7 @@ export default function EarlyLife(initialData) {
                   />
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16">
                         <h2 className="block text-3xl md:text-4xl xl:text-5xl xl:leading-[1.09] font-normal text-navy">{earlyLife.section1Heading}</h2>
                       </div>
@@ -145,8 +145,8 @@ export default function EarlyLife(initialData) {
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
-                      <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 md:ml-auto">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
+                      <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-32 md:ml-auto">
                         <h2 className="block text-3xl md:text-4xl xl:text-5xl xl:leading-[1.09] font-normal text-navy">{earlyLife.section2Heading}</h2>
                       </div>
 
@@ -158,22 +158,35 @@ export default function EarlyLife(initialData) {
                         </div>
 
                         <div className="w-full md:w-7/12 relative content order-1 md:order-2">
-                          <figure className="mb-6 md:mb-8 xl:mb-10">
-                            <SanityImageWrapper
-                              className="w-full"
-                              alt={earlyLife.section2Image.alt}
-                              image={earlyLife.section2Image.asset}
-                              baseWidth={900}
-                              baseHeight={580}
-                            />
-                          </figure>
+                          <div className="flex space-x-5 md:space-x-5 xl:space-x-10">
+                            <div className="w-[92%]">
+                              <figure className="mb-6 md:mb-8 xl:mb-10">
+                                <SanityImageWrapper
+                                  className="w-full"
+                                  alt={earlyLife.section2Image.alt}
+                                  image={earlyLife.section2Image.asset}
+                                  baseWidth={900}
+                                  baseHeight={580}
+                                />
+                              </figure>
+                            </div>
+                            <div className="w-[8%]">
+                              <figure className="mb-6 md:mb-8 xl:mb-10 bg-off-white">
+                                <img
+                                  className="w-full mix-blend-darken bg-off-white"
+                                  alt={"School Creset"}
+                                  src="/images/crest.jpg"
+                                />
+                              </figure>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </section>
                   </Container>
 
                   <Container thin>
-                    <section className="content relative mb-12 md:mb-24 xl:mb-32">
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="flex flex-wrap">
                         <div className="w-full md:w-7/12 content md:pr-16 xl:pr-24 mb-8 md:mb-0">
                           <h2 className="block text-3xl md:text-4xl xl:text-5xl font-normal text-navy">{earlyLife.section3Heading}</h2>
