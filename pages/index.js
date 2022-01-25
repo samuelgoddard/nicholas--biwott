@@ -95,7 +95,7 @@ export default function Home(initialData) {
                   <section className="md:min-h-screen flex flex-wrap md:items-center mb-12 md:mb-24 xl:mb-32 relative">
                     <div className="md:absolute md:inset-0 flex flex-wrap items-center order-2 md:order-1">
                       <div className="w-full" data-scroll data-scroll-speed={0.45}>
-                        <div className="px-6 md:pl-10 md:pr-0 xl:pl-12 xl:pr-0">
+                        <div className="px-6 md:pl-10 md:pr-0 xl:pl-12 xl:pr-0 xl:pt-32">
                           <m.h1 
                             initial="initial"
                             animate="enter"
@@ -128,7 +128,7 @@ export default function Home(initialData) {
                             <m.div variants={fade} className="content">
                               <BlockContent serializers={{ container: ({ children }) => children }} blocks={home.heroText} />
 
-                              <a href="#content" className="mt-12 md:mt-16 md:-mb-16 xl:mt-24 xl:-mb-24 block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
+                              <a href="#content" className="mt-12 md:mt-16 md:-mb-16 xl:mt-16 xl:-mb-16 block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                                 <svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><g stroke="#8E7E62" fill="none" fill-rule="evenodd"><path d="M54.586 28 28 54.586 1.414 28 28 1.414 54.586 28Z" stroke-width="2" opacity=".5"/><path fill="#8E7E62" fill-rule="nonzero" d="m34.977 29.02-7.24 7.246-7.242-7.244.851-.853 5.787 5.787V19.37h1.206v14.586l5.79-5.789z"/></g></svg>
                               </a>
                             </m.div>
@@ -165,7 +165,7 @@ export default function Home(initialData) {
                           )}
                         </figure>
                       </div>
-                      <div className="w-full md:w-1/2 content md:px-12 xl:px-16 order-1 md:order-2 mb-6 md:mb-0 max-w-2xl" data-scroll data-scroll-speed={0.25}>
+                      <div className="w-full md:w-1/2 content md:px-12 lg:px-20 xl:px-24 order-1 md:order-2 mb-6 md:mb-0 max-w-2xl" data-scroll data-scroll-speed={0.25}>
                         <BlockContent serializers={{ container: ({ children }) => children }} blocks={home.supportingContent} />
 
                         <div className="mt-5">
