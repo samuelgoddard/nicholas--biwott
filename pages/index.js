@@ -69,6 +69,10 @@ export default function Home(initialData) {
       <NextSeo
         title={home.seo?.metaTitle ? home.seo.metaTitle : home.title }
         description={home.seo?.metaDesc ? home.seo.metaDesc : null }
+        openGraph={{
+          title: home.seo?.metaTitle ? home.seo.metaTitle : home.title,
+          description: home.seo?.metaDesc ? home.seo.metaDesc : null,
+        }}
       />
       
       <LocomotiveScrollProvider

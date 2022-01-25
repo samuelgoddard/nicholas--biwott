@@ -7,6 +7,13 @@ export default {
     locale: 'en_GB',
     url: 'https://nicholas-biwott.vercel.app/',
     site_name: 'Nicholas Biwott',
+    images: [
+      {
+        url: '/images/social-share.png',
+        width: 800,
+        height: 600
+      },
+    ]
   },
   twitter: {
     handle: '@samuelgoddard',
