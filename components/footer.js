@@ -18,82 +18,82 @@ export default function Footer() {
               <ul className="flex flex-wrap text-sm md:text-base">
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Home
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/public-servant">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Public Servant
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/quotes">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Quotes
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/sources">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Sources
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/early-life">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Early Life
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/philanthropist">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Philanthropist
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/timeline">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Timeline
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/copyright">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Copyright
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/businessman">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Businessman
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/personal-life">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Personal Life
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
-                  <a className="block" href="mailto:contact@email.com">
+                  <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300" href="mailto:contact@email.com">
                     Contact
                   </a>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/terms-and-conditions">
-                    <a className="block">
+                    <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Terms &amp; Conditions
                     </a>
                   </Link>

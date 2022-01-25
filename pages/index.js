@@ -127,6 +127,10 @@ export default function Home(initialData) {
                           >
                             <m.div variants={fade} className="content">
                               <BlockContent serializers={{ container: ({ children }) => children }} blocks={home.heroText} />
+
+                              <a href="#content" className="mt-12 md:mt-16 md:-mb-16 xl:mt-24 xl:-mb-24 block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
+                                <svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg"><g stroke="#8E7E62" fill="none" fill-rule="evenodd"><path d="M54.586 28 28 54.586 1.414 28 28 1.414 54.586 28Z" stroke-width="2" opacity=".5"/><path fill="#8E7E62" fill-rule="nonzero" d="m34.977 29.02-7.24 7.246-7.242-7.244.851-.853 5.787 5.787V19.37h1.206v14.586l5.79-5.789z"/></g></svg>
+                              </a>
                             </m.div>
                           </m.div>
                         </div>
@@ -146,7 +150,7 @@ export default function Home(initialData) {
                   </section>
 
                   <Container>
-                    <section className="flex flex-wrap items-center mb-12 md:mb-24 xl:mb-32">
+                    <section className="flex flex-wrap items-center mb-12 md:mb-24 xl:mb-32" id="content">
                       <div className="w-full md:w-1/2 relative content order-2 md:order-1">
                         <figure>
                           <SanityImageWrapper
