@@ -49,7 +49,7 @@ export default function Press(initialData) {
       <NextSeo title="Archive" />
       
       <LocomotiveScrollProvider
-        options={{ smooth: true, lerp: 0.05 }}
+        options={{ smooth: false }}
         containerRef={containerRef}
         watch={[]}
       >

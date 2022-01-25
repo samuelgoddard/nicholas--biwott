@@ -17,7 +17,7 @@ export default function Privacy() {
       <NextSeo title="Sources" />
       
       <LocomotiveScrollProvider
-        options={{ smooth: true, lerp: 0.05 }}
+        options={{ smooth: false }}
         containerRef={containerRef}
         watch={[]}
       >

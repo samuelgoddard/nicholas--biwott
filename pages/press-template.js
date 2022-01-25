@@ -19,7 +19,7 @@ export default function PressTemplate() {
       <NextSeo title="Press Article" />
       
       <LocomotiveScrollProvider
-        options={{ smooth: true, lerp: 0.05 }}
+        options={{ smooth: false }}
         containerRef={containerRef}
         watch={[]}
       >

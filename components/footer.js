@@ -59,16 +59,16 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
-                  <Link href="/archive">
+                  <Link href="/timeline">
                     <a className="block">
-                      Archive
+                      Timeline
                     </a>
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
-                  <Link href="/privacy">
+                  <Link href="/copyright">
                     <a className="block">
-                      Privacy Policy
+                      Copyright
                     </a>
                   </Link>
                 </li>

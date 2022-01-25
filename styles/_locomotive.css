@@ -1,4 +1,4 @@
-html.has-scroll-smooth {
+/* html.has-scroll-smooth {
   @apply overflow-hidden fixed inset-0;
 }
 
@@ -23,4 +23,4 @@ html.has-scroll-dragging {
 
 [data-scroll-direction="horizontal"] [data-scroll-section] {
   @apply inline-block align-top whitespace-nowrap h-full;
-}
+} */

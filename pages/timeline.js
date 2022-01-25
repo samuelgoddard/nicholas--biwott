@@ -33,7 +33,7 @@ export default function Timeline(initialData) {
       <NextSeo title="Timeline" />
       
       <LocomotiveScrollProvider
-        options={{ smooth: true, lerp: 0.05 }}
+        options={{ smooth: false }}
         containerRef={containerRef}
         watch={[]}
       >

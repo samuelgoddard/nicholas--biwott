@@ -70,7 +70,7 @@ export default function Quotes(initialData) {
       />
       
       <LocomotiveScrollProvider
-        options={{ smooth: true, lerp: 0.05 }}
+        options={{ smooth: false }}
         containerRef={containerRef}
         watch={[]}
       >

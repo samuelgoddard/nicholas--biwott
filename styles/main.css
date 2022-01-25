@@ -12,6 +12,9 @@
 /* Tailwind Utilities */
 @import 'tailwindcss/utilities';
 
+html {
+  scroll-behavior: smooth;
+}
 
 /* Simple defaults */
 body {

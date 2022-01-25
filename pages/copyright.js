@@ -14,10 +14,10 @@ export default function Privacy() {
 
   return (
     <Layout>
-      <NextSeo title="Privacy" />
+      <NextSeo title="Copyright" />
       
       <LocomotiveScrollProvider
-        options={{ smooth: true, lerp: 0.05 }}
+        options={{ smooth: false }}
         containerRef={containerRef}
         watch={[]}
       >
@@ -35,7 +35,7 @@ export default function Privacy() {
                 <m.main variants={fade} className="mb-12 md:mb-16 xl:mb-24 pt-[112px] md:pt-[138px]">
                   
                   <div className="mb-12 md:mb-0">
-                    <Hero metaText="Privacy" firstWord="Privacy Policy" />
+                    <Hero metaText="Legal" firstWord="Copyright" />
                   </div>
 
                   <Container thinnest>

@@ -17,7 +17,7 @@ export default function Menu() {
       <NextSeo title="Menu" />
       
       <LocomotiveScrollProvider
-        options={{ smooth: true, lerp: 0.05 }}
+        options={{ smooth: false }}
         containerRef={containerRef}
         watch={[]}
       >
@@ -33,7 +33,7 @@ export default function Menu() {
               >
                 {/* pt-[108px] md:pt-[136px] xl:pt-[156px] */}
                 <m.main variants={fade}>
-                  <section className="min-h-screen flex flex-wrap mb-12 md:mb-24 xl:mb-32 relative pt-[112px] md:pt-[138px]">
+                  <section className="min-h-screen flex flex-wrap relative pt-[112px] md:pt-[138px]">
                     <div className="mt-auto w-full md:min-h-[600px] mb-12 md:mb-0">
                       <NavSection backTextFirst="Nicholas" backTextSecond="Biwott" metaText="The Life Of Nicholas" />
                     </div>
@@ -49,13 +49,6 @@ export default function Menu() {
                             </Link>
                           </li>
                           <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
-                            <Link href="/archive">
-                              <a className="block">
-                                Archive
-                              </a>
-                            </Link>
-                          </li>
-                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
                             <Link href="/sources">
                               <a className="block">
                                 Sources
@@ -66,6 +59,13 @@ export default function Menu() {
                             <a className="block" href="mailto:contact@email.com">
                               Contact
                             </a>
+                          </li>
+                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
+                            <Link href="/copyright">
+                              <a className="block">
+                                Copyright
+                              </a>
+                            </Link>
                           </li>
                         </ul>
                       </Container>
