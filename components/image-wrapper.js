@@ -5,13 +5,13 @@ function ImageWrapper({ src, width, height, alt, className, fill, priority, noPl
   const [imageIsLoaded, setImageIsLoaded] = useState(false)
 
   return (
-    <div className={`${className} ${ noPlaceholder ? '' : 'bg-off-black bg-opacity-10'}`}>
+    <div className={`${className} ${ noPlaceholder ? '' : 'bg-off-black bg-opacity-10'} ${imageIsLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500 ease-in-out will-change`}>
       <Img
         quality={90}
         src={src}
         width={width}
         height={height}
-        className={`${className} ${imageIsLoaded ? 'opacity-100' : 'opacity-0'} ${priority ? 'opacity-100' : ''} transition-opacity duration-500 ease-in-out will-change`} 
+        className={`${className}`} 
         alt={alt ?? null}
         layout={fill ? 'fill' : 'responsive'}
         objectFit={fill ? 'cover' : null}

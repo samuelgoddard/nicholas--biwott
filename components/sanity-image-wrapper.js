@@ -42,12 +42,11 @@ function SanityImageWrapper({ image, sizes, className, alt, baseWidth, baseHeigh
   }
 
   return (
-    <div className={`${className} ${ noPlaceholder ? '' : ''} bg-black dark:bg-opacity-25 bg-opacity-10`}>
+    <div className={`${ noPlaceholder ? '' : ''} bg-black dark:bg-opacity-25 bg-opacity-10 ${imageIsLoaded ? 'opacity-100' : 'opacity-0'} transition duration-1000 ease-in-out`}>
       <Img
         src={imageProps.src}
         { ...( !removeWidth && { width: setBaseWidth } ) }
         { ...( !removeHeight && { height:  setBaseHeight } ) }
-        className={`${className} ${imageIsLoaded ? 'opacity-100' : 'opacity-0'} transition duration-500 ease-in-out`}
         alt={alt}
         layout={fill ? 'fill' : 'responsive'}
         objectFit={fill ? 'cover' : null}

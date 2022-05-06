@@ -154,7 +154,6 @@ export default function Home(initialData) {
                       <div className="w-full md:w-1/2 relative content order-2 md:order-1">
                         <figure>
                           <SanityImageWrapper
-                            className="w-full h-full object-cover"
                             alt={home.supportingContentImage.alt}
                             image={home.supportingContentImage.asset}
                             baseWidth={900}
@@ -185,20 +184,22 @@ export default function Home(initialData) {
                       </figure>
 
                       <figure className="md:absolute md:top-0 md:right-0 md:bottom-0 z-0 opacity-60 w-full md:w-1/2">
-                        <SanityImageWrapper
-                          className="w-full h-full object-cover object-center hidden md:block"
-                          alt={home.supportingQuote.quoteImage.alt}
-                          image={home.supportingQuote.quoteImage.asset}
-                          fill
-                        />
-
-                        <SanityImageWrapper
-                          className="w-full block md:hidden"
-                          alt={home.supportingQuote.quoteImage.alt}
-                          image={home.supportingQuote.quoteImage.asset}
-                          baseWidth={750}
-                          baseHeight={750}
-                        />
+                        <div className='hidden md:block'>
+                          <SanityImageWrapper
+                            alt={home.supportingQuote.quoteImage.alt}
+                            image={home.supportingQuote.quoteImage.asset}
+                            fill
+                          />
+                        </div>
+                        
+                        <div className='block md:hidden'>
+                          <SanityImageWrapper
+                            alt={home.supportingQuote.quoteImage.alt}
+                            image={home.supportingQuote.quoteImage.asset}
+                            baseWidth={750}
+                            baseHeight={750}
+                          />
+                        </div>
                       </figure>
                     </section>
                   </Container>

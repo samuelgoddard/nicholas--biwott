@@ -150,12 +150,12 @@ export default function Philanthropist(initialData) {
                         <div className="w-full md:w-1/2 relative content mb-8 md:mb-0 overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
                             <SanityImageWrapper
-                              className="w-full"
                               alt={philanthropist.section1Image.alt}
                               image={philanthropist.section1Image.asset}
                               baseWidth={720}
                               baseHeight={720}
                             />
+                            {philanthropist.section1Image.caption && (<figcaption>{philanthropist.section1Image.caption}</figcaption>)}
                           </figure>
                         </div>
                         <div className="w-full md:w-1/2 content md:px-12 xl:px-16 max-w-2xl">
@@ -206,12 +206,12 @@ export default function Philanthropist(initialData) {
                         <div className="w-full md:w-7/12 relative content order-1 md:order-2">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
                             <SanityImageWrapper
-                              className="w-full"
                               alt={philanthropist.section3Image.alt}
                               image={philanthropist.section3Image.asset}
                               baseWidth={900}
                               baseHeight={700}
                             />
+                            {philanthropist.section3Image.caption && (<figcaption>{philanthropist.section3Image.caption}</figcaption>)}
                           </figure>
                         </div>
                       </div>
@@ -232,7 +232,6 @@ export default function Philanthropist(initialData) {
                       <div className="w-full md:w-5/12 relative content order-1 md:order-2 mb-6 md:mb-0">
                         <figure>
                           <SanityImageWrapper
-                            className="w-full"
                             alt={philanthropist.section4Quote.quoteImage.alt}
                             image={philanthropist.section4Quote.quoteImage.asset}
                             baseWidth={720}
@@ -254,12 +253,12 @@ export default function Philanthropist(initialData) {
                         <div className="w-full md:w-7/12 relative content">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
                             <SanityImageWrapper
-                              className="w-full"
                               alt={philanthropist.section5Image.alt}
                               image={philanthropist.section5Image.asset}
                               baseWidth={900}
                               baseHeight={700}
                             />
+                            {philanthropist.section5Image.caption && (<figcaption>{philanthropist.section5Image.caption}</figcaption>)}
                           </figure>
                         </div>
 

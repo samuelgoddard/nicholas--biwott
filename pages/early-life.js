@@ -131,6 +131,7 @@ export default function EarlyLife(initialData) {
                               baseWidth={900}
                               baseHeight={600}
                             />
+                            {earlyLife.section1Image.caption && (<figcaption>{earlyLife.section1Image.caption}</figcaption>)}
                           </figure>
 
                           <div className="content content--small css-cols">
@@ -168,6 +169,7 @@ export default function EarlyLife(initialData) {
                                   baseWidth={900}
                                   baseHeight={580}
                                 />
+                                {earlyLife.section2Image.caption && (<figcaption>{earlyLife.section2Image.caption}</figcaption>)}
                               </figure>
                             </div>
                             <div className="w-[8%]">
@@ -205,6 +207,7 @@ export default function EarlyLife(initialData) {
                               width={720}
                               height={1060}
                             />
+                            {earlyLife.section3Image.caption && (<figcaption>{earlyLife.section3Image.caption}</figcaption>)}
                           </figure>
                         </div>
                       </div>

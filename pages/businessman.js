@@ -143,6 +143,7 @@ export default function BusinessMan(initialData) {
                               baseWidth={720}
                               baseHeight={720}
                             />
+                            {businessman.section1Image.caption && (<figcaption>{businessman.section1Image.caption}</figcaption>)}
                           </figure>
                         </div>
                         <div className="w-full md:w-1/2 content md:px-12 xl:px-16 max-w-2xl">
@@ -171,6 +172,7 @@ export default function BusinessMan(initialData) {
                               baseWidth={720}
                               baseHeight={550}
                             />
+                            {businessman.section2Image.caption && (<figcaption>{businessman.section2Image.caption}</figcaption>)}
                           </figure>
                         </div>
 
@@ -228,6 +230,7 @@ export default function BusinessMan(initialData) {
                               baseWidth={900}
                               baseHeight={700}
                             />
+                            {businessman.section4Image.caption && (<figcaption>{businessman.section4Image.caption}</figcaption>)}
                           </figure>
                         </div>
                       </div>

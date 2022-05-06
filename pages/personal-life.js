@@ -132,7 +132,6 @@ export default function PersonalLife(initialData) {
                         <div className="w-full md:w-5/12 relative content mb-6 md:mb-0 md:pr-8 xl:pr-12">
                           <figure>
                             <SanityImageWrapper
-                              className="w-full"
                               alt={personalLife.section1Qutoe.quoteImage.alt}
                               image={personalLife.section1Qutoe.quoteImage.asset}
                               baseWidth={720}
@@ -169,13 +168,14 @@ export default function PersonalLife(initialData) {
                         <div className="w-full md:w-7/12 relative content order-1 md:order-2">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
                             <SanityImageWrapper
-                              className="w-full"
+                              
                               alt={personalLife.section2Image.alt}
                               image={personalLife.section2Image.asset}
                               baseWidth={900}
                               baseHeight={600}
                             />
                           </figure>
+                          {personalLife.section2Image.caption && (<figcaption>{personalLife.section2Image.caption}</figcaption>)}
                         </div>
                       </div>
                     </section>
@@ -196,7 +196,7 @@ export default function PersonalLife(initialData) {
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0 md:pr-8 xl:pr-12">
                         <figure>
                           <SanityImageWrapper
-                            className="w-full"
+                            
                             alt={personalLife.section3Quote.quoteImage.alt}
                             image={personalLife.section3Quote.quoteImage.asset}
                             baseWidth={720}

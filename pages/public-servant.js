@@ -257,7 +257,6 @@ export default function PublicServant(initialData) {
                         <div className="w-full md:w-1/2 relative content overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
                             <SanityImageWrapper
-                              className="w-full"
                               alt={publicServant.sixtiesSection1Image.alt}
                               image={publicServant.sixtiesSection1Image.asset}
                               baseWidth={900}
@@ -279,7 +278,6 @@ export default function PublicServant(initialData) {
                       <div className="w-full md:w-5/12 relative content mb-6 md:mb-0">
                         <figure>
                           <SanityImageWrapper
-                            className="w-full"
                             alt={publicServant.sixtiesSection2Quote.quoteImage.alt}
                             image={publicServant.sixtiesSection2Quote.quoteImage.asset}
                             baseWidth={720}
@@ -310,7 +308,6 @@ export default function PublicServant(initialData) {
                         <div className="w-full md:w-1/2 relative content overflow-hidden">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
                             <SanityImageWrapper
-                              className="w-full"
                               alt={publicServant.sixtiesSection3Image.alt}
                               image={publicServant.sixtiesSection3Image.asset}
                               baseWidth={900}
@@ -331,7 +328,6 @@ export default function PublicServant(initialData) {
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <SanityImageWrapper
-                            className="w-full"
                             alt={publicServant.sixtiesSection4Quote.quoteImage.alt}
                             image={publicServant.sixtiesSection4Quote.quoteImage.asset}
                             baseWidth={900}
@@ -367,7 +363,6 @@ export default function PublicServant(initialData) {
                         <div className="w-full md:w-1/2 relative content overflow-hidden mb-8 md:mb-0">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
                             <SanityImageWrapper
-                              className="w-full"
                               alt={publicServant.seventiesSection1Image.alt}
                               image={publicServant.seventiesSection1Image.asset}
                               baseWidth={900}
@@ -398,7 +393,6 @@ export default function PublicServant(initialData) {
                         <div className="w-full md:w-5/12 relative content">
                           <figure className="mb-6 md:mb-8 xl:mb-10 w-full md:max-w-[450px] ml-auto">
                             <SanityImageWrapper
-                              className="w-full"
                               alt={publicServant.seventiesSection2Image.alt}
                               image={publicServant.seventiesSection2Image.asset}
                               baseWidth={900}
@@ -418,7 +412,6 @@ export default function PublicServant(initialData) {
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
                         <figure>
                           <SanityImageWrapper
-                            className="w-full"
                             alt={publicServant.seventiesSection3Quote.quoteImage.alt}
                             image={publicServant.seventiesSection3Quote.quoteImage.asset}
                             baseWidth={720}
@@ -454,7 +447,6 @@ export default function PublicServant(initialData) {
                         <div className="w-full md:w-1/2 relative content overflow-hidden mb-8 md:mb-0">
                           <figure className="mb-6 md:mb-8 xl:mb-10">
                             <SanityImageWrapper
-                              className="w-full"
                               alt={publicServant.eightiesSection1Image.alt}
                               image={publicServant.eightiesSection1Image.asset}
                               baseWidth={900}
