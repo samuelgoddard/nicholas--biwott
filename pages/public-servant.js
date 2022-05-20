@@ -680,8 +680,8 @@ export default function PublicServant(initialData) {
                           <SanityImageWrapper
                             alt={publicServant.ninetiesSection4Quote3.quoteImage.alt}
                             image={publicServant.ninetiesSection4Quote3.quoteImage.asset}
-                            baseWidth={900}
-                            baseHeight={680}
+                            baseWidth={680}
+                            baseHeight={900}
                           />
                           {publicServant.ninetiesSection4Quote3.quoteImage.caption && (<figcaption>{publicServant.ninetiesSection4Quote3.quoteImage.caption}</figcaption>)}
                         </figure>
