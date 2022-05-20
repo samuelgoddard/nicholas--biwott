@@ -87,18 +87,6 @@ const query = `{
       caption,
       alt
     },
-    seventiesSection1Quote {
-      quoteText,
-      author,
-      authorTitle,
-      quoteImage {
-        asset -> {
-          ...
-        },
-        caption,
-        alt
-      },
-    },
     seventiesSection2Heading,
     seventiesSection2Text,
     seventiesSection2Image {
@@ -178,6 +166,18 @@ const query = `{
       },
     },
     ninetiesSection4Quote2 {
+      quoteText,
+      author,
+      authorTitle,
+      quoteImage {
+        asset -> {
+          ...
+        },
+        caption,
+        alt
+      },
+    },
+    ninetiesSection4Quote3 {
       quoteText,
       author,
       authorTitle,
@@ -432,31 +432,6 @@ export default function PublicServant(initialData) {
                     </section>
                   </Container>
 
-                  <Container>
-                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48" id="seventies" data-scroll data-scroll-repeat data-scroll-call="seventies">
-                      <div className="w-full md:w-7/12 relative content order-2 md:order-1">
-                        <figure>
-                          <SanityImageWrapper
-                            alt={publicServant.seventiesSection1Quote.quoteImage.alt}
-                            image={publicServant.seventiesSection1Quote.quoteImage.asset}
-                            baseWidth={900}
-                            baseHeight={680}
-                          />
-                          {publicServant.seventiesSection1Quote.quoteImage.caption && (<figcaption>{publicServant.seventiesSection1Quote.quoteImage.caption}</figcaption>)}
-                        </figure>
-                      </div>
-                      <div className="w-full md:w-5/12 content order-1 md:order-2 mb-6 md:mb-0">
-                        <figure className="block">
-                          <blockquote className="blockquote blockquote--small md:pl-12 xl:pl-16">
-                            <p>{publicServant.seventiesSection1Quote.quoteText}</p>
-
-                            <figcaption>{publicServant.seventiesSection1Quote.author}{publicServant.seventiesSection1Quote.authorTitle && (<>,<cite>{publicServant.seventiesSection1Quote.authorTitle}</cite></>)}</figcaption>
-                          </blockquote>
-                        </figure>
-                      </div>                    
-                    </section>
-                  </Container>
-
                   <Container thin>
                     <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="flex flex-wrap">
@@ -692,6 +667,31 @@ export default function PublicServant(initialData) {
                             <p>{publicServant.ninetiesSection4Quote2.quoteText}</p>
 
                             <figcaption>{publicServant.ninetiesSection4Quote2.author}{publicServant.ninetiesSection4Quote2.authorTitle && (<>,<cite>{publicServant.ninetiesSection4Quote2.authorTitle}</cite></>)}</figcaption>
+                          </blockquote>
+                        </figure>
+                      </div>                    
+                    </section>
+                  </Container>
+
+                  <Container>
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48" id="seventies" data-scroll data-scroll-repeat data-scroll-call="seventies">
+                      <div className="w-full md:w-7/12 relative content order-2 md:order-1">
+                        <figure>
+                          <SanityImageWrapper
+                            alt={publicServant.ninetiesSection4Quote3.quoteImage.alt}
+                            image={publicServant.ninetiesSection4Quote3.quoteImage.asset}
+                            baseWidth={900}
+                            baseHeight={680}
+                          />
+                          {publicServant.ninetiesSection4Quote3.quoteImage.caption && (<figcaption>{publicServant.ninetiesSection4Quote3.quoteImage.caption}</figcaption>)}
+                        </figure>
+                      </div>
+                      <div className="w-full md:w-5/12 content order-1 md:order-2 mb-6 md:mb-0">
+                        <figure className="block">
+                          <blockquote className="blockquote blockquote--small md:pl-12 xl:pl-16">
+                            <p>{publicServant.ninetiesSection4Quote3.quoteText}</p>
+
+                            <figcaption>{publicServant.ninetiesSection4Quote3.author}{publicServant.ninetiesSection4Quote3.authorTitle && (<>,<cite>{publicServant.ninetiesSection4Quote3.authorTitle}</cite></>)}</figcaption>
                           </blockquote>
                         </figure>
                       </div>                    
