@@ -87,6 +87,18 @@ const query = `{
       caption,
       alt
     },
+    section6Quote {
+      quoteText,
+      author,
+      authorTitle,
+      quoteImage {
+        asset -> {
+          ...
+        },
+        caption,
+        alt
+      },
+    },
     seo {
       ...,
       shareGraphic {
@@ -265,6 +277,31 @@ export default function Philanthropist(initialData) {
                         <div className="w-full md:w-5/12 content md:pl-8 xl:pl-12 max-w-2xl mb-8 md:mb-0">
                           <BlockContent serializers={{ container: ({ children }) => children }} blocks={philanthropist.section5Text} />
                         </div>
+                      </div>
+                    </section>
+                  </Container>
+
+                  <Container thin>
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48 items-center">
+                      <div className="w-full md:w-7/12 content order-2 md:order-1">
+                        <figure className="block">
+                          <blockquote className="blockquote blockquote--small md:pr-16 xl:pr-24">
+                            <p>{philanthropist.section6Quote.quoteText}</p>
+
+                            <figcaption>{philanthropist.section6Quote.author}{philanthropist.section6Quote.authorTitle && (<>,<cite>{philanthropist.section6Quote.authorTitle}</cite></>)}</figcaption>
+                          </blockquote>
+                        </figure>
+                      </div>
+                      <div className="w-full md:w-5/12 relative content order-1 md:order-2 mb-6 md:mb-0">
+                        <figure>
+                          <SanityImageWrapper
+                            alt={philanthropist.section6Quote.quoteImage.alt}
+                            image={philanthropist.section6Quote.quoteImage.asset}
+                            baseWidth={720}
+                            baseHeight={900}
+                          />
+                          {philanthropist.section6Quote.quoteImage.caption && (<figcaption>{philanthropist.section6Quote.quoteImage.caption}</figcaption>)}
+                        </figure>
                       </div>
                     </section>
                   </Container>

@@ -134,8 +134,8 @@ export default function PersonalLife(initialData) {
                             <SanityImageWrapper
                               alt={personalLife.section1Qutoe.quoteImage.alt}
                               image={personalLife.section1Qutoe.quoteImage.asset}
-                              baseWidth={720}
-                              baseHeight={900}
+                              baseWidth={900}
+                              baseHeight={720}
                             />
                             {personalLife.section1Qutoe.quoteImage.caption && (<figcaption>{personalLife.section1Qutoe.quoteImage.caption}</figcaption>)}
                           </figure>

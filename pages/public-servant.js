@@ -87,6 +87,18 @@ const query = `{
       caption,
       alt
     },
+    seventiesSection1Quote {
+      quoteText,
+      author,
+      authorTitle,
+      quoteImage {
+        asset -> {
+          ...
+        },
+        caption,
+        alt
+      },
+    },
     seventiesSection2Heading,
     seventiesSection2Text,
     seventiesSection2Image {
@@ -153,6 +165,30 @@ const query = `{
       caption,
       alt
     },
+    ninetiesSection4Quote1 {
+      quoteText,
+      author,
+      authorTitle,
+      quoteImage {
+        asset -> {
+          ...
+        },
+        caption,
+        alt
+      },
+    },
+    ninetiesSection4Quote2 {
+      quoteText,
+      author,
+      authorTitle,
+      quoteImage {
+        asset -> {
+          ...
+        },
+        caption,
+        alt
+      },
+    },
     ninetiesSection4QuoteHeading,
     ninetiesSection4QuoteAuthor,
     ninetiesSection4QuoteAuthorTitle,
@@ -173,6 +209,21 @@ const query = `{
     noughtiesSection1Heading,
     noughtiesSection1Text,
     noughtiesSection1TextRight,
+    noughtiesSection1QuoteHeading,
+    noughtiesSection1QuoteAuthor,
+    noughtiesSection1QuoteAuthorTitle,
+    noughtiesSection1Quote {
+      quoteText,
+      author,
+      authorTitle,
+      quoteImage {
+        asset -> {
+          ...
+        },
+        caption,
+        alt
+      },
+    },
     noughtiesSection2Quote {
       quoteText,
       author,
@@ -381,6 +432,31 @@ export default function PublicServant(initialData) {
                     </section>
                   </Container>
 
+                  <Container>
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48" id="seventies" data-scroll data-scroll-repeat data-scroll-call="seventies">
+                      <div className="w-full md:w-7/12 relative content order-2 md:order-1">
+                        <figure>
+                          <SanityImageWrapper
+                            alt={publicServant.seventiesSection1Quote.quoteImage.alt}
+                            image={publicServant.seventiesSection1Quote.quoteImage.asset}
+                            baseWidth={900}
+                            baseHeight={680}
+                          />
+                          {publicServant.seventiesSection1Quote.quoteImage.caption && (<figcaption>{publicServant.seventiesSection1Quote.quoteImage.caption}</figcaption>)}
+                        </figure>
+                      </div>
+                      <div className="w-full md:w-5/12 content order-1 md:order-2 mb-6 md:mb-0">
+                        <figure className="block">
+                          <blockquote className="blockquote blockquote--small md:pl-12 xl:pl-16">
+                            <p>{publicServant.seventiesSection1Quote.quoteText}</p>
+
+                            <figcaption>{publicServant.seventiesSection1Quote.author}{publicServant.seventiesSection1Quote.authorTitle && (<>,<cite>{publicServant.seventiesSection1Quote.authorTitle}</cite></>)}</figcaption>
+                          </blockquote>
+                        </figure>
+                      </div>                    
+                    </section>
+                  </Container>
+
                   <Container thin>
                     <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="flex flex-wrap">
@@ -571,7 +647,59 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container>
-                    <section className="content relative my-12 md:my-24 xl:my-32 py-8 md:py-12 xl:py-16 border-t border-b border-gold border-opacity-25">
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48 items-center">
+                      <div className="w-full md:w-5/12 relative content mb-6 md:mb-0">
+                        <figure>
+                          <SanityImageWrapper
+                            className="w-full"
+                            alt={publicServant.ninetiesSection4Quote1.quoteImage.alt}
+                            image={publicServant.ninetiesSection4Quote1.quoteImage.asset}
+                            baseWidth={900}
+                            baseHeight={1000}
+                          />
+                          {publicServant.ninetiesSection4Quote1.quoteImage.caption && (<figcaption>{publicServant.ninetiesSection4Quote1.quoteImage.caption}</figcaption>)}
+                        </figure>
+                      </div>
+                      <div className="w-full md:w-7/12 content">
+                        <figure className="block">
+                          <blockquote className="blockquote blockquote--small md:pl-12 xl:pl-16">
+                            <p>{publicServant.ninetiesSection4Quote1.quoteText}</p>
+
+                            <figcaption>{publicServant.ninetiesSection4Quote1.author}{publicServant.ninetiesSection4Quote1.authorTitle && (<>,<cite>{publicServant.ninetiesSection4Quote1.authorTitle}</cite></>)}</figcaption>
+                          </blockquote>
+                        </figure>
+                      </div>                    
+                    </section>
+                  </Container>
+
+                  <Container>
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48 items-center">
+                      <div className="w-full md:w-5/12 relative content mb-6 md:mb-0 order-1 md:order-2">
+                        <figure>
+                          <SanityImageWrapper
+                            className="w-full"
+                            alt={publicServant.ninetiesSection4Quote2.quoteImage.alt}
+                            image={publicServant.ninetiesSection4Quote2.quoteImage.asset}
+                            baseWidth={900}
+                            baseHeight={1000}
+                          />
+                          {publicServant.ninetiesSection4Quote2.quoteImage.caption && (<figcaption>{publicServant.ninetiesSection4Quote2.quoteImage.caption}</figcaption>)}
+                        </figure>
+                      </div>
+                      <div className="w-full md:w-7/12 content">
+                        <figure className="block">
+                          <blockquote className="blockquote blockquote--small md:pr-12 xl:pr-16 order-2 md:text-right md:order-1">
+                            <p>{publicServant.ninetiesSection4Quote2.quoteText}</p>
+
+                            <figcaption>{publicServant.ninetiesSection4Quote2.author}{publicServant.ninetiesSection4Quote2.authorTitle && (<>,<cite>{publicServant.ninetiesSection4Quote2.authorTitle}</cite></>)}</figcaption>
+                          </blockquote>
+                        </figure>
+                      </div>                    
+                    </section>
+                  </Container>
+
+                  <Container>
+                    <section className="content relative my-12 md:my-24 xl:my-32 py-8 md:py-12 xl:py-16 ">
                       <span className="block absolute top-0 left-0 h-10 ml-[48%] bg-off-white px-3 text-7xl font-display leading-none -mt-4 text-gold text-opacity-50">“</span>
 
                       <div className="flex flex-wrap justify-center">
@@ -603,6 +731,50 @@ export default function PublicServant(initialData) {
 
 
                   {/* Noughties */}
+
+                  <Container>
+                    <section className="content relative my-12 md:my-24 xl:my-32 py-8 md:py-12 xl:py-16">
+                      <span className="block absolute top-0 left-0 h-10 ml-[48%] bg-off-white px-3 text-7xl font-display leading-none -mt-4 text-gold text-opacity-50">“</span>
+
+                      <div className="flex flex-wrap justify-center">
+                        <div className="w-full md:w-2/3 xl:w-1/2 text-center">
+                          <figure className="block">
+                            <blockquote className="blockquote blockquote--small">
+                              <p>“{publicServant.noughtiesSection1QuoteHeading}”</p>
+                              <figcaption>{publicServant.noughtiesSection1QuoteAuthor},<cite>{publicServant.noughtiesSection1QuoteAuthorTitle}</cite></figcaption>
+                            </blockquote>
+                          </figure>
+                        </div>
+                      </div>
+                    </section>
+                  </Container>
+
+                  <Container>
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48 items-center">
+                      <div className="w-full md:w-5/12 relative content mb-6 md:mb-0">
+                        <figure>
+                          <SanityImageWrapper
+                            className="w-full"
+                            alt={publicServant.noughtiesSection1Quote.quoteImage.alt}
+                            image={publicServant.noughtiesSection1Quote.quoteImage.asset}
+                            baseWidth={900}
+                            baseHeight={1000}
+                          />
+                          {publicServant.noughtiesSection1Quote.quoteImage.caption && (<figcaption>{publicServant.noughtiesSection1Quote.quoteImage.caption}</figcaption>)}
+                        </figure>
+                      </div>
+                      <div className="w-full md:w-7/12 content">
+                        <figure className="block">
+                          <blockquote className="blockquote blockquote--small md:pl-12 xl:pl-16">
+                            <p>{publicServant.noughtiesSection1Quote.quoteText}</p>
+
+                            <figcaption>{publicServant.noughtiesSection1Quote.author}{publicServant.noughtiesSection1Quote.authorTitle && (<>,<cite>{publicServant.noughtiesSection1Quote.authorTitle}</cite></>)}</figcaption>
+                          </blockquote>
+                        </figure>
+                      </div>                    
+                    </section>
+                  </Container>
+
                   <Container>
                     <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48" id="noughties" data-scroll data-scroll-repeat data-scroll-call="noughties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
@@ -628,6 +800,7 @@ export default function PublicServant(initialData) {
                       </div>                    
                     </section>
                   </Container>
+                  
 
                   <Container thin>
                     <section className="content relative mb-24 md:mb-32 xl:mb-48">
