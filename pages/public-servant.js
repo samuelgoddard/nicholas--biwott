@@ -194,6 +194,13 @@ const query = `{
     ninetiesSection4QuoteAuthorTitle,
     ninetiesSection5Heading,
     ninetiesSection5Text,
+    ninetiesSection5Image {
+      asset -> {
+        ...
+      },
+      caption,
+      alt
+    },
     ninetiesSection6Quote {
       quoteText,
       author,
@@ -723,6 +730,15 @@ export default function PublicServant(initialData) {
                         </div>
 
                         <div className="w-full md:w-1/2 content md:pl-12 xl:pl-16 max-w-2xl">
+                          <figure className="mb-8">
+                            <SanityImageWrapper
+                              alt={publicServant.ninetiesSection5Image.alt}
+                              image={publicServant.ninetiesSection5Image.asset}
+                              baseWidth={900}
+                              baseHeight={680}
+                            />
+                            {publicServant.ninetiesSection5Image.caption && (<figcaption>{publicServant.ninetiesSection5Image.caption}</figcaption>)}
+                          </figure>
                           <BlockContent serializers={{ container: ({ children }) => children }} blocks={publicServant.ninetiesSection5Text} />
                         </div>
                       </div>
