@@ -35,7 +35,7 @@ export default function Header({ timeline, menu }) {
   }, [scroll, showLogo, menu, showMenu])
 
   return (
-    <header className="p-6 md:p-10 xl:p-12 fixed top-0 left-0 right-0 w-full z-10" data-scroll data-scroll-sticky data-scroll-target="#__next">
+    <header className={`p-6 md:p-10 xl:p-12 fixed top-0 left-0 right-0 w-full z-10 ${!timeline ? 'mix-blend-difference text-off-white' : 'text-off-black'}`} data-scroll data-scroll-sticky data-scroll-target="#__next">
 
       {timeline && (
         <div className={`absolute inset-0 bg-off-white transition-opacity ease-in-out duration-500 z-10 hidden md:block ${ showTimeline ? 'opacity-100' : 'opacity-0' }`}></div>
@@ -55,7 +55,7 @@ export default function Header({ timeline, menu }) {
               <LogoMark/>
             </div>
           </div>
-          <span className="block font-medium text-[16px] text-grey mt-1">1940 – 2017</span>
+          <span className="block font-medium text-[16px] text-current opacity-30 mt-1">1940 – 2017</span>
         </div>
 
         {timeline && (

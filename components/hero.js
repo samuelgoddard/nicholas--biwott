@@ -32,12 +32,12 @@ export default function Hero({ metaText, secondMetaText, firstWord, secondWord, 
                 )}
                 {secondWord && (
                   <span className="inline-block overflow-hidden mx-1">
-                    <m.span variants={reveal} className="block text-black">{secondWord}.</m.span>
+                    <m.span variants={reveal} className="block text-green">{secondWord}.</m.span>
                   </span>
                 )}
                 {thirdWord && (
                   <span className="inline-block overflow-hidden mx-1">
-                    <m.span variants={reveal} className="block text-black">{thirdWord}.</m.span>
+                    <m.span variants={reveal} className="block text-red">{thirdWord}.</m.span>
                   </span>
                 )}
               </m.h1>

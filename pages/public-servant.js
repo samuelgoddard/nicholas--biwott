@@ -117,6 +117,13 @@ const query = `{
       caption,
       alt
     },
+    eightiesSection1Image2 {
+      asset -> {
+        ...
+      },
+      caption,
+      alt
+    },
     eightiesSection2Quote {
       quoteText,
       author,
@@ -132,6 +139,13 @@ const query = `{
     ninetiesSection1Heading,
     ninetiesSection1Text,
     ninetiesSection1TextRight,
+    ninetiesSection1Image {
+      asset -> {
+        ...
+      },
+      caption,
+      alt
+    },
     ninetiesSection2Quote {
       quoteText,
       author,
@@ -216,6 +230,13 @@ const query = `{
     noughtiesSection1Heading,
     noughtiesSection1Text,
     noughtiesSection1TextRight,
+    noughtiesSection1QuoteImage {
+      asset -> {
+        ...
+      },
+      caption,
+      alt
+    },
     noughtiesSection1QuoteHeading,
     noughtiesSection1QuoteAuthor,
     noughtiesSection1QuoteAuthorTitle,
@@ -318,7 +339,7 @@ export default function PublicServant(initialData) {
                               alt={publicServant.sixtiesSection1Image.alt}
                               image={publicServant.sixtiesSection1Image.asset}
                               baseWidth={900}
-                              baseHeight={600}
+                              baseHeight={1200}
                             />
                             {publicServant.sixtiesSection1Image.caption && (
                               <figcaption>{publicServant.sixtiesSection1Image.caption}</figcaption>
@@ -523,6 +544,26 @@ export default function PublicServant(initialData) {
                     </section>
                   </Container>
 
+                  <Container thin>
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
+                      <div className="flex flex-wrap justify-center">
+                        <div className="w-full md:w-2/3 relative content overflow-hidden mb-8 md:mb-0">
+                          <figure className="mb-6 md:mb-8 xl:mb-10">
+                            <SanityImageWrapper
+                              alt={publicServant.eightiesSection1Image2.alt}
+                              image={publicServant.eightiesSection1Image2.asset}
+                              baseWidth={900}
+                              baseHeight={600}
+                            />
+                            {publicServant.eightiesSection1Image2.caption && (
+                              <figcaption>{publicServant.eightiesSection1Image2.caption}</figcaption>
+                            )}
+                          </figure>
+                        </div>
+                      </div>
+                    </section>
+                  </Container>
+
 
                   {/* NINETIES */}
                   <Container>
@@ -551,6 +592,7 @@ export default function PublicServant(initialData) {
                     </section>
                   </Container>
 
+
                   <Container thin>
                     <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="absolute top-0 right-0 mr-[-7%] 3xl:mr-[-15%] mt-[-8%] flex flex-wrap overflow-hidden z-0" data-scroll data-scroll-speed={-0.7}>
@@ -568,6 +610,26 @@ export default function PublicServant(initialData) {
 
                         <div className="w-full md:w-1/2 content md:pl-12 xl:pl-16 max-w-2xl">
                           <BlockContent serializers={{ container: ({ children }) => children }} blocks={publicServant.ninetiesSection1TextRight} />
+                        </div>
+                      </div>
+                    </section>
+                  </Container>
+
+                  <Container thin>
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
+                      <div className="flex flex-wrap justify-center">
+                        <div className="w-full md:w-2/3 relative content overflow-hidden mb-8 md:mb-0">
+                          <figure className="mb-6 md:mb-8 xl:mb-10">
+                            <SanityImageWrapper
+                              alt={publicServant.ninetiesSection1Image.alt}
+                              image={publicServant.ninetiesSection1Image.asset}
+                              baseWidth={900}
+                              baseHeight={600}
+                            />
+                            {publicServant.ninetiesSection1Image.caption && (
+                              <figcaption>{publicServant.ninetiesSection1Image.caption}</figcaption>
+                            )}
+                          </figure>
                         </div>
                       </div>
                     </section>
@@ -747,9 +809,28 @@ export default function PublicServant(initialData) {
 
 
                   {/* Noughties */}
+                  <Container thin>
+                    <section className="content relative mb-0 md:mb-0">
+                      <div className="flex flex-wrap justify-center">
+                        <div className="w-full md:w-2/3 relative content overflow-hidden mb-8 md:mb-0">
+                          <figure className="mb-6 md:mb-8 xl:mb-10">
+                            <SanityImageWrapper
+                              alt={publicServant.noughtiesSection1QuoteImage.alt}
+                              image={publicServant.noughtiesSection1QuoteImage.asset}
+                              baseWidth={900}
+                              baseHeight={600}
+                            />
+                            {publicServant.noughtiesSection1QuoteImage.caption && (
+                              <figcaption>{publicServant.noughtiesSection1QuoteImage.caption}</figcaption>
+                            )}
+                          </figure>
+                        </div>
+                      </div>
+                    </section>
+                  </Container>
 
                   <Container>
-                    <section className="content relative my-12 md:my-24 xl:my-32 py-8 md:py-12 xl:py-16">
+                    <section className="content relative mt-6mb-12 md:mt-12 md:mb-24 xl:mt-16 xl:mb-32 py-8 md:py-12 xl:py-16">
                       <span className="block absolute top-0 left-0 h-10 ml-[48%] bg-off-white px-3 text-7xl font-display leading-none -mt-4 text-gold text-opacity-50">“</span>
 
                       <div className="flex flex-wrap justify-center">

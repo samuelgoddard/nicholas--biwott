@@ -129,7 +129,7 @@ export default function EarlyLife(initialData) {
                               alt={earlyLife.section1Image.alt}
                               image={earlyLife.section1Image.asset}
                               baseWidth={900}
-                              baseHeight={600}
+                              baseHeight={900}
                             />
                             {earlyLife.section1Image.caption && (<figcaption>{earlyLife.section1Image.caption}</figcaption>)}
                           </figure>

@@ -109,10 +109,10 @@ export default function Home(initialData) {
                               <m.span variants={reveal} className="block text-black">{home.heroWord1}.</m.span>
                             </span>
                             <span className="block overflow-hidden">
-                              <m.span variants={reveal} className="block text-black">{home.heroWord2}.</m.span>
+                              <m.span variants={reveal} className="block text-green">{home.heroWord2}.</m.span>
                             </span>
                             <span className="block overflow-hidden">
-                              <m.span variants={reveal} className="block text-black">{home.heroWord3}.</m.span>
+                              <m.span variants={reveal} className="block text-red">{home.heroWord3}.</m.span>
                             </span>
                           </m.h1>
                           

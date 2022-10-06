@@ -185,6 +185,8 @@ export default function PersonalLife(initialData) {
                     <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="flex justify-center">
                         <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 md:mx-auto text-center">
+                          <iframe className="video" width="100%" src="https://www.youtube.com/embed/EAABVhaWXl0" title="Nicholus Biwott dead: Murkomen speaks from Kaptarakwa, Keiyo South" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                           <h2 className="block text-3xl md:text-4xl xl:text-5xl xl:leading-[1.12] font-normal text-navy">{personalLife.section3Heading}</h2>
                         </div>
                       </div>
