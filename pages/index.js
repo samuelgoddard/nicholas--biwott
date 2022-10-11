@@ -168,7 +168,7 @@ export default function Home(initialData) {
                         <BlockContent serializers={{ container: ({ children }) => children }} blocks={home.supportingContent} />
 
                         <div className="mt-5">
-                          <ButtonLink destination="/" a11yText="Find Out More" label="Find Out More" />
+                          <ButtonLink destination="/public-servant" a11yText="Find Out More" label="Find Out More" />
                         </div>
                       </div>
                     </section>

@@ -227,6 +227,7 @@ const query = `{
         alt
       },
     },
+    ninetiesSection6VideoEmbed,
     noughtiesSection1Heading,
     noughtiesSection1Text,
     noughtiesSection1TextRight,
@@ -830,8 +831,8 @@ export default function PublicServant(initialData) {
                   </Container>
 
                   <Container>
-                    <section className="content relative mt-6mb-12 md:mt-12 md:mb-24 xl:mt-16 xl:mb-32 py-8 md:py-12 xl:py-16">
-                      <span className="block absolute top-0 left-0 h-10 ml-[48%] bg-off-white px-3 text-7xl font-display leading-none -mt-4 text-gold text-opacity-50">“</span>
+                    <section className="content relative mt-1 mb-12 md:mt-5 md:mb-24 xl:mt-8 xl:mb-32 pb-8 md:pb-12 xl:pb-16">
+                      {/* <span className="block absolute top-0 left-0 h-10 ml-[48%] bg-off-white px-3 text-7xl font-display leading-none -mt-4 text-gold text-opacity-50">“</span> */}
 
                       <div className="flex flex-wrap justify-center">
                         <div className="w-full md:w-2/3 xl:w-1/2 text-center">
@@ -895,6 +896,16 @@ export default function PublicServant(initialData) {
                           </blockquote>
                         </figure>
                       </div>                    
+                    </section>
+                  </Container>
+
+                  <Container thin>
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
+                      <div className="flex justify-center">
+                        <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 md:mx-auto text-center">
+                          <div className="video" dangerouslySetInnerHTML={{ __html: publicServant.ninetiesSection6VideoEmbed }} />
+                        </div>
+                      </div>
                     </section>
                   </Container>
                   
