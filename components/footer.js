@@ -87,7 +87,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="w-1/2 md:w-1/4 py-2">
-                  <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300" href="mailto:contact@email.com">
+                  <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300" href="mailto:contact@nicholasbiwott.com">
                     Contact
                   </a>
                 </li>
