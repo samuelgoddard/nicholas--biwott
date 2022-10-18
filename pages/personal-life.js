@@ -60,6 +60,7 @@ const query = `{
     section2Text,
     section3Heading,
     section3VideoEmbed,
+    section3VideoCaption,
     section3Quote {
       quoteText,
       author,
@@ -157,6 +158,19 @@ export default function PersonalLife(initialData) {
 
                   <Container thin>
                     <section className="content relative mb-24 md:mb-32 xl:mb-48">
+                      <div className="flex justify-center">
+                        <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 md:mx-auto text-center">
+                          
+                          <div className="video" dangerouslySetInnerHTML={{ __html: personalLife.section3VideoEmbed }} />
+
+                          <figcaption>{personalLife.section3VideoCaption}</figcaption>
+                        </div>
+                      </div>
+                    </section>
+                  </Container>
+
+                  <Container thin>
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
                       <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 md:ml-auto">
                         <h2 className="block text-3xl md:text-4xl xl:text-5xl xl:leading-[1.09] font-normal text-navy">{personalLife.section2Heading}</h2>
                       </div>
@@ -187,8 +201,6 @@ export default function PersonalLife(initialData) {
                       <div className="flex justify-center">
                         <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 md:mx-auto text-center">
                           <h2 className="block text-3xl md:text-4xl xl:text-5xl xl:leading-[1.12] font-normal text-navy mb-12 md:mb-16 xl:mb-20">{personalLife.section3Heading}</h2>
-                          
-                          <div className="video" dangerouslySetInnerHTML={{ __html: personalLife.section3VideoEmbed }} />
                         </div>
                       </div>
                     </section>

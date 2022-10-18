@@ -37,13 +37,13 @@ export default function Footer() {
                     </a>
                   </Link>
                 </li>
-                <li className="w-1/2 md:w-1/4 py-2">
+                {/* <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/sources">
                     <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Sources
                     </a>
                   </Link>
-                </li>
+                </li> */}
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/early-life">
                     <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
@@ -65,13 +65,13 @@ export default function Footer() {
                     </a>
                   </Link>
                 </li>
-                <li className="w-1/2 md:w-1/4 py-2">
+                {/* <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/copyright">
                     <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Copyright
                     </a>
                   </Link>
-                </li>
+                </li> */}
                 <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/businessman">
                     <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
@@ -91,13 +91,13 @@ export default function Footer() {
                     Contact
                   </a>
                 </li>
-                <li className="w-1/2 md:w-1/4 py-2">
+                {/* <li className="w-1/2 md:w-1/4 py-2">
                   <Link href="/terms-and-conditions">
                     <a className="block hover:opacity-70 focus:opacity-70 transition-opacity ease-in-out duration-300">
                       Terms &amp; Conditions
                     </a>
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>

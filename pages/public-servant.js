@@ -228,6 +228,7 @@ const query = `{
       },
     },
     ninetiesSection6VideoEmbed,
+    ninetiesSection6VideoCaption,
     noughtiesSection1Heading,
     noughtiesSection1Text,
     noughtiesSection1TextRight,
@@ -904,6 +905,8 @@ export default function PublicServant(initialData) {
                       <div className="flex justify-center">
                         <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 md:mx-auto text-center">
                           <div className="video" dangerouslySetInnerHTML={{ __html: publicServant.ninetiesSection6VideoEmbed }} />
+
+                          <figcaption>{publicServant.ninetiesSection6VideoCaption}</figcaption>
                         </div>
                       </div>
                     </section>

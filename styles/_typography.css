@@ -12,6 +12,10 @@
     @apply text-4xl md:text-5xl text-navy;
   }
 
+  & > ul {
+    @apply list-disc my-4 list-inside text-lg;
+  }
+
   & * + h2 {
     @apply mt-16;
   }

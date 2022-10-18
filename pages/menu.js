@@ -48,25 +48,25 @@ export default function Menu() {
                               </a>
                             </Link>
                           </li>
-                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
+                          {/* <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
                             <Link href="/sources">
                               <a className="block hover:opacity-70 focus:opacity-70 ease-in-out duration-300 transition-opacity">
                                 Sources
                               </a>
                             </Link>
-                          </li>
+                          </li> */}
                           <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
                             <a className="block" href="mailto:contact@email.com">
                               Contact
                             </a>
                           </li>
-                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
+                          {/* <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
                             <Link href="/copyright">
                               <a className="block hover:opacity-70 focus:opacity-70 ease-in-out duration-300 transition-opacity">
                                 Copyright
                               </a>
                             </Link>
-                          </li>
+                          </li> */}
                         </ul>
                       </Container>
                     </div>
