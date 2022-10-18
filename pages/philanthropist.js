@@ -252,10 +252,7 @@ export default function Philanthropist(initialData) {
 
                   <Container thin>
                     <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48">
-                      <div className="w-full md:w-6/12 content order-2 md:order-1 mt-24 md:mt-0">
-                        <BlockContent serializers={{ container: ({ children }) => children }} blocks={philanthropist.section4Text} />
-                      </div>
-                      <div className="w-full md:w-5/12 md:ml-auto relative content order-1 md:order-2 mb-6 md:mb-0">
+                      <div className="w-full md:w-8/12 content order-2 md:order-1 mt-24 md:mt-0">
                         <figure className="block">
                           <blockquote className="blockquote blockquote--small md:pr-16 xl:pr-24">
                             <p>{philanthropist.section4Quote.quoteText}</p>
@@ -263,6 +260,9 @@ export default function Philanthropist(initialData) {
                             <figcaption>{philanthropist.section4Quote.author}{philanthropist.section4Quote.authorTitle && (<>,<cite>{philanthropist.section4Quote.authorTitle}</cite></>)}</figcaption>
                           </blockquote>
                         </figure>
+                      </div>
+                      <div className="w-full md:w-4/12  relative content order-1 md:order-2 mb-6 md:mb-0">
+                        <BlockContent serializers={{ container: ({ children }) => children }} blocks={philanthropist.section4Text} />
                         {/* <figure>
                           <SanityImageWrapper
                             alt={philanthropist.section4Quote.quoteImage.alt}
