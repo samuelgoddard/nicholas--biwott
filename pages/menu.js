@@ -41,13 +41,13 @@ export default function Menu() {
                     <div className="mt-auto w-full pb-12">
                       <Container>
                         <ul className="flex flex-wrap text-sm md:text-base justify-center">
-                          <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
+                          {/* <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
                             <Link href="/quotes">
                               <a className="block hover:opacity-70 focus:opacity-70 ease-in-out duration-300 transition-opacity">
                                 Quotes
                               </a>
                             </Link>
-                          </li>
+                          </li> */}
                           {/* <li className="w-1/2 md:w-1/4 py-2 text-center uppercase">
                             <Link href="/sources">
                               <a className="block hover:opacity-70 focus:opacity-70 ease-in-out duration-300 transition-opacity">
