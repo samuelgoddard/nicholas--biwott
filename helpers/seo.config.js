@@ -5,7 +5,7 @@ export default {
   openGraph: {
     type: 'website',
     locale: 'en_GB',
-    url: 'https://nicholas-biwott.vercel.app/',
+    url: 'https://nicholasbiwott.com/',
     site_name: 'Nicholas Biwott',
     images: [
       {
