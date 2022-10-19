@@ -15,7 +15,7 @@ export default function NavSection({ backTextFirst, backTextSecond, metaText }) 
           <ul className="flex flex-wrap">
             <li className="w-1/2 py-3 md:py-6 xl:py-8 relative pl-6 md:pl-10">
               <Link href="/early-life">
-                <a className="block group transition-all ease-in-out duration-300 hover:pl-2">
+                <a className="block group transition-all ease-in-out duration-300 md:hover:pl-2">
                   <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold opacity-75 rotate-45 group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300 block absolute top-0 left-0 mt-[24px] md:mt-[42px] xl:mt-[58px]"></span>
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl block text-navy mb-2 pm rmd:mb-3">Early Life</span>
                   <span className="text-grey block text-sm md:text-base">Diligence. Aspiration. Dedication.</span>
@@ -24,7 +24,7 @@ export default function NavSection({ backTextFirst, backTextSecond, metaText }) 
             </li>
             <li className="w-1/2 py-3 md:py-6 xl:py-8 relative pl-6 md:pl-10">
               <Link href="/businessman">
-                <a className="block group transition-all ease-in-out duration-300 hover:pl-2">
+                <a className="block group transition-all ease-in-out duration-300 md:hover:pl-2">
                   <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold opacity-75 rotate-45 group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300 block absolute top-0 left-0 mt-[24px] md:mt-[42px] xl:mt-[58px]"></span>
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl block text-navy mb-2 pm rmd:mb-3">Businessman</span>
                   <span className="text-grey block text-sm md:text-base">Growth. Jobs. Entrepreneurship.</span>
@@ -33,7 +33,7 @@ export default function NavSection({ backTextFirst, backTextSecond, metaText }) 
             </li>
             <li className="w-1/2 py-3 md:py-6 xl:py-8 relative pl-6 md:pl-10">
               <Link href="/public-servant">
-                <a className="block group transition-all ease-in-out duration-300 hover:pl-2">
+                <a className="block group transition-all ease-in-out duration-300 md:hover:pl-2">
                   <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold opacity-75 rotate-45 group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300 block absolute top-0 left-0 mt-[24px] md:mt-[42px] xl:mt-[58px]"></span>
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl block text-navy mb-2 pm rmd:mb-3">Public Servant</span>
                   <span className="text-grey block text-sm md:text-base">Energy. Vision. Kenya.</span>
@@ -42,7 +42,7 @@ export default function NavSection({ backTextFirst, backTextSecond, metaText }) 
             </li>
             <li className="w-1/2 py-3 md:py-6 xl:py-8 relative pl-6 md:pl-10">
               <Link href="/philanthropist">
-                <a className="block group transition-all ease-in-out duration-300 hover:pl-2">
+                <a className="block group transition-all ease-in-out duration-300 md:hover:pl-2">
                   <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold opacity-75 rotate-45 group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300 block absolute top-0 left-0 mt-[24px] md:mt-[42px] xl:mt-[58px]"></span>
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl block text-navy mb-2 pm rmd:mb-3">Philanthropist</span>
                   <span className="text-grey block text-sm md:text-base">Healthcare. Community. Entrepreneurship.</span>
@@ -51,7 +51,7 @@ export default function NavSection({ backTextFirst, backTextSecond, metaText }) 
             </li>
             <li className="w-1/2 py-3 md:py-6 xl:py-8 relative pl-6 md:pl-10">
               <Link href="/personal-life">
-                <a className="block group transition-all ease-in-out duration-300 hover:pl-2">
+                <a className="block group transition-all ease-in-out duration-300 md:hover:pl-2">
                   <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold opacity-75 rotate-45 group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300 block absolute top-0 left-0 mt-[24px] md:mt-[42px] xl:mt-[58px]"></span>
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl block text-navy mb-2 pm rmd:mb-3">Personal Life</span>
                   <span className="text-grey block text-sm md:text-base">Vision. Energy. Duty</span>
@@ -60,7 +60,7 @@ export default function NavSection({ backTextFirst, backTextSecond, metaText }) 
             </li>
             <li className="w-1/2 py-3 md:py-6 xl:py-8 relative pl-6 md:pl-10">
               <Link href="/timeline">
-                <a className="block group transition-all ease-in-out duration-300 hover:pl-2">
+                <a className="block group transition-all ease-in-out duration-300 md:hover:pl-2">
                   <span className="w-3 md:w-4 h-3 md:h-4 border md:border-2 border-gold opacity-75 rotate-45 group-hover:-rotate-45 group-focus:-rotate-45 transition-transform ease-in-out duration-300 block absolute top-0 left-0 mt-[24px] md:mt-[42px] xl:mt-[58px]"></span>
                   <span className="font-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl block text-navy mb-2 pm rmd:mb-3">Timeline</span>
                   <span className="text-grey block text-sm md:text-base">The life of Nicholas</span>

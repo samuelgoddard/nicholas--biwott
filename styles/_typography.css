@@ -13,7 +13,20 @@
   }
 
   & > ul {
-    @apply list-disc my-4 list-inside text-lg;
+    @apply my-4 list-inside text-lg;
+
+    li {
+      @apply relative pl-[28px] mb-2; 
+
+      &:before {
+        content: ' ';
+        @apply absolute top-0 left-0 w-[15px] h-[15px] border-2 border-gold border-opacity-50 rotate-45 translate-y-[6px];
+      }
+    }
+  }
+
+  & > ul + p {
+    @apply mt-8;
   }
 
   & * + h2 {

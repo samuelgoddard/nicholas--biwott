@@ -18,7 +18,7 @@ html {
 
 /* Simple defaults */
 body {
-  @apply font-sans antialiased text-black bg-off-white;
+  @apply font-sans antialiased text-black bg-off-white selection:bg-off-black selection:text-off-white;
 }
 
 .video {
