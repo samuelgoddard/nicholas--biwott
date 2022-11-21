@@ -139,6 +139,18 @@ const query = `{
     ninetiesSection1Heading,
     ninetiesSection1Text,
     ninetiesSection1TextRight,
+    ninetiesSection15Quote {
+      quoteText,
+      author,
+      authorTitle,
+      quoteImage {
+        asset -> {
+          ...
+        },
+        caption,
+        alt
+      },
+    },
     ninetiesSection1Image {
       asset -> {
         ...
@@ -304,7 +316,7 @@ export default function PublicServant(initialData) {
                 exit="exit"
               >
                 {/* pt-[108px] md:pt-[136px] xl:pt-[156px] */}
-                <m.main variants={fade} className="mb-12 md:mb-16 xl:mb-24 pt-[112px] md:pt-[138px]">
+                <m.main variants={fade} className="mb-12 md:mb-16 xl:mb-24 pt-[112px] md:pt-[138px] overflow-hidden">
                   <Hero
                     metaText={publicServant.hero.heroMetaText}
                     firstWord={publicServant.hero.heroWord1}
@@ -568,6 +580,8 @@ export default function PublicServant(initialData) {
 
 
                   {/* NINETIES */}
+                  
+
                   <Container>
                     <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48" id="nineties" data-scroll data-scroll-repeat data-scroll-call="nineties">
                       <div className="w-full md:w-7/12 relative content order-2 md:order-1">
@@ -614,6 +628,32 @@ export default function PublicServant(initialData) {
                           <BlockContent serializers={{ container: ({ children }) => children }} blocks={publicServant.ninetiesSection1TextRight} />
                         </div>
                       </div>
+                    </section>
+                  </Container>
+
+                  <Container>
+                    <section className="flex flex-wrap mb-24 md:mb-32 xl:mb-48 overflow-hidden" id="nineties" data-scroll data-scroll-repeat data-scroll-call="nineties">
+                      <div className="w-full md:w-7/12 relative content order-2 md:order-1">
+                        <figure className="block">
+                          <blockquote className="blockquote blockquote--small md:pr-12 xl:pr-16">
+                            <p>{publicServant.ninetiesSection15Quote.quoteText}</p>
+
+                            <figcaption>{publicServant.ninetiesSection15Quote.author}{publicServant.ninetiesSection15Quote.authorTitle && (<>,<cite>{publicServant.ninetiesSection15Quote.authorTitle}</cite></>)}</figcaption>
+                          </blockquote>
+                        </figure>
+                      </div>
+                      <div className="w-full md:w-5/12 content order-1 md:order-2 mb-6 md:mb-0">
+                      <figure>
+                        <SanityImageWrapper
+                          className="w-full"
+                          alt={publicServant.ninetiesSection15Quote.quoteImage.alt}
+                          image={publicServant.ninetiesSection15Quote.quoteImage.asset}
+                          baseWidth={659}
+                          baseHeight={900}
+                        />
+                        {publicServant.ninetiesSection15Quote.quoteImage.caption && (<figcaption>{publicServant.ninetiesSection15Quote.quoteImage.caption}</figcaption>)}
+                      </figure>
+                      </div>                    
                     </section>
                   </Container>
 

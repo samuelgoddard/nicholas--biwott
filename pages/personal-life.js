@@ -73,6 +73,8 @@ const query = `{
         alt
       },
     },
+    section4Quote,
+    section4QuoteAuthor,
     seo {
       ...,
       shareGraphic {
@@ -229,6 +231,18 @@ export default function PersonalLife(initialData) {
                             <figcaption>{personalLife.section3Quote.author}{personalLife.section3Quote.authorTitle && (<>,<cite>{personalLife.section3Quote.authorTitle}</cite></>)}</figcaption>
                           </blockquote>
                         </figure>
+                      </div>
+                    </section>
+                  </Container>
+
+                  <Container thin>
+                    <section className="content relative mb-24 md:mb-32 xl:mb-48">
+                      <div className="flex justify-center">
+                        <div className="w-11/12 md:w-9/12 mb-8 md:mb-12 xl:mb-16 md:mx-auto text-center">
+                          <h2 className="block text-3xl md:text-4xl xl:text-5xl xl:leading-[1.12] font-normal text-navy mb-12 md:mb-16 xl:mb-20">{personalLife.section4Quote}</h2>
+
+                          <figcaption className="font-medium">{personalLife.section4QuoteAuthor}</figcaption>
+                        </div>
                       </div>
                     </section>
                   </Container>
